@@ -3,7 +3,7 @@
 Amy Skin OEM —— 中国私牌护肤品生产商。低 MOQ 1000、12 个现成配方与定制配方。GitHub Pages 原型站（2026-11-06 上线，框架依据 Issue #1）。
 
 - 线上地址：https://tileserachied.github.io/amyskinoem/
-- 目标域名：https://amyskinoem.com/（已注册；DNS 尚未解析，见 M11。先不要加 CNAME——已实测：加 CNAME 会导致 GitHub Pages 把线上站重定向到无法解析的域名；CNAME 已删除，等 DNS 生效后再加。所有 canonical 与 sitemap 已指向 amyskinoem.com）
+- 目标域名：[amyskinoem.com](https://amyskinoem.com/)（已注册；DNS 尚未解析，见 M11。先不要加 CNAME——已实测：加 CNAME 会导致 GitHub Pages 把线上站重定向到无法解析的域名；CNAME 已删除，等 DNS 生效后再加。所有 canonical 与 sitemap 已指向 amyskinoem.com）
 - 联系：WhatsApp https://wa.me/8618928823858 · info@amyskinoem.com
 - Logo：已定 E（Sans Caps，大写 AMY SKIN，字母间距）。完整 VI 见 brand.html：颜色 Ink #1A1A1A、Charcoal #333333、Warm Grey #8A8378、Ivory #FAF8F5，字体 Arial / Helvetica，留白 1x cap-A，最小尺寸 20 mm 印刷 / 100 px 屏幕，单色与反白版本、面膜袋与管状包装用的窄距版本，以及各类产品效果图。方向 D（Serif 衬线标志）与 F（堆叠标志）未被选中。方向 A/B/C（花瓣、植物、拱形）与早期现代水滴标志已被否决并删除。
 - 规则：只写配方（无型号），每 SKU 起订量 1000，无固定价、按单私下报价，只做获客；广州合作工厂，不写“自有工厂 / 投资工厂”；唯一可证实的认证是 SGS ISO 22716（Sanmusheng），Moksha / Wangsha 的认证待核实；产品图只用带 Amy Skin E logo 的占位图（M7）。
