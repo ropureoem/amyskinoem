@@ -55,7 +55,7 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.22;margin:0 0 12px;letter-spac
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
 .card h3{margin:8px 0}.card p{color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.step b{font-size:30px;display:block;color:var(--ink)}
 .table{width:100%;border-collapse:collapse;background:#fff}.table th,.table td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}.table th{background:var(--bg)}.tscroll{overflow-x:auto}
 .form label{display:block;font-weight:700;margin:14px 0 6px}.form input,.form select,.form textarea{width:100%;padding:12px;border:1.5px solid #cfc9bb;border-radius:10px;font:inherit;background:#fff}
@@ -335,4 +335,45 @@ footer.site .social a{color:#DCE4EE;font-weight:700;font-size:14px}
 .home .marquee-row{animation:none;flex-wrap:wrap;width:auto}
 .home .marquee-set[aria-hidden="true"]{display:none}
 .home .brand-marquee{overflow:visible}
+}
+
+/* ---- language switch + mobile bottom nav (added 2026-11-08) ---- */
+.language-switch{display:inline-flex;align-items:center;gap:6px}
+.language-switch a{display:inline-block;padding:5px 12px;border:1px solid transparent;border-radius:999px;color:#FAF6EF;font-size:13px;font-weight:700;letter-spacing:1px;line-height:1.4;text-decoration:none;white-space:nowrap}
+.language-switch a:hover{color:var(--gold);text-decoration:none}
+.language-switch a[aria-current="true"]{color:var(--gold);border-color:var(--gold)}
+header.site .language-switch{margin-left:8px}
+@media(max-width:900px){header.site .nav>.language-switch{display:none}}
+.mobile-menu .language-switch{display:flex;flex-wrap:wrap;margin-top:16px}
+.mobile-menu .language-switch a{padding:5px 12px;border-bottom:0}
+footer.site .language-switch{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding:0}
+footer.site .language-switch a{color:#FAF6EF}
+.bottom-nav{display:none}
+@media(max-width:699px){
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:repeat(5,1fr);background:var(--ink);border-top:1px solid var(--gold)}
+.bottom-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:10px 4px calc(10px + env(safe-area-inset-bottom));color:#FAF6EF;font-size:13px;font-weight:700;line-height:1.3;text-align:center;text-decoration:none}
+.bottom-nav a:hover{color:var(--gold);text-decoration:none}
+.bottom-nav a[aria-current="true"]{color:var(--gold);text-decoration:underline;text-underline-offset:4px}
+footer.site{padding-bottom:140px}
+}
+/* ---- home process strip: horizontal scroll at all widths (6 steps) ---- */
+.home .steps{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.home .step{flex:0 0 240px;scroll-snap-align:start;padding:16px 18px}
+
+/* ---- suppliers row (added 2026-11-08): slow single-row marquee on a white band, below brand wall ---- */
+.home .suppliers{background:#fff;border-top:1px solid var(--line)}
+.home .suppliers .sec-head{margin-bottom:28px}
+.home .supplier-marquee{overflow:hidden}
+.home .supplier-row{animation-duration:90s}
+.home .supplier-row .marquee-set{gap:56px;padding-right:56px}
+.home .supplier-row .marquee-set img{max-height:34px;max-width:140px;width:auto;height:auto;object-fit:contain}
+.home .supplier-marquee:hover .marquee-row{animation-play-state:paused}
+@media(max-width:560px){
+.home .supplier-row .marquee-set{gap:36px;padding-right:36px}
+.home .supplier-row .marquee-set img{max-height:26px;max-width:100px}
+}
+@media(prefers-reduced-motion:reduce){
+.home .supplier-row{animation:none;flex-wrap:wrap;width:auto}
+.home .supplier-row .marquee-set[aria-hidden="true"]{display:none}
+.home .supplier-marquee{overflow:visible}
 }
