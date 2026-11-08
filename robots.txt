@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /zh/
 
 Sitemap: https://amyskinoem.com/sitemap.xml
