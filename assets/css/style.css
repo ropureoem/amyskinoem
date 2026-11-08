@@ -221,3 +221,118 @@ nav.main a:not(.btn):hover{color:var(--gold);border-bottom-color:var(--gold);tex
 .home .ing-chip{padding:10px 12px}
 .home .brand-chip{font-size:12.5px;padding:6px 11px}
 }
+
+/* ---- home redesign v2 2026-11-08: Moes framework, cream base, static numbers ---- */
+/* All rules scoped under body.home so no other page (incl. zh/) changes. */
+.nowrap{white-space:nowrap}
+h1,h2,h3,.logo{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+body.home{background:var(--bg)}
+body.home section.alt{background:#fff}
+.home section{padding:64px 0}
+/* kill the scroll fade-up (home.js still adds .reveal, CSS makes it a no-op) */
+.home .reveal{opacity:1;transform:none;transition:none}
+/* hero: white band, static, gold primary + outline WhatsApp (no green) */
+.home .hero{background:#fff;padding:64px 0 56px}
+.home .hero .btn.wa{background:transparent;border:1.5px solid var(--ink);color:var(--ink)!important}
+.home .hero .btn.wa:hover{background:var(--bg)}
+.home .btn.wa{background:transparent;border:1.5px solid var(--ink);color:var(--ink)!important}
+/* service cards: Build your product */
+.home .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.home .svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;color:var(--ink);text-decoration:none}
+.home .svc-card:hover{border-color:var(--gold)}
+.home .svc-card:hover h3{text-decoration:underline}
+.home .svc-img{aspect-ratio:16/9;overflow:hidden;background:var(--bg)}
+.home .svc-img img{width:100%;height:100%;object-fit:contain;display:block}
+.home .svc-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.home .svc-body h3{margin:0;font-size:19px}
+.home .svc-body p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.home .svc-link{font-weight:700;border-bottom:2px solid var(--gold);padding-bottom:2px;align-self:flex-start}
+/* product cards: natural heights, no forced equal-height blank space */
+.home .shop{align-items:start}
+/* ingredients: 3 groups, each ingredient named once */
+.home .ing3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.home .ing-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.home .ing-card h3{margin:0 0 14px;font-size:19px}
+.home .ing-card p{color:var(--muted);font-size:14.5px}
+.home .ing-list{display:flex;flex-direction:column;gap:8px}
+.home .ing-list .ing-chip{padding:10px 12px}
+/* why: static stats band (white), 4 compact differentiators, short cert line */
+.home .stats{background:#fff}
+.home .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.home .why-grid .card{padding:20px}
+.home .why-grid .card h3{margin:0 0 6px;font-size:18px}
+.home .why-grid .card p{margin:0;font-size:14.5px}
+.home .cert-short{margin:28px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:16px}
+/* brand logo marquee: real logos, two rows, opposite directions */
+.home .brand-marquee{overflow:hidden}
+.home .marquee-row{display:flex;width:max-content;animation:home-marquee 46s linear infinite}
+.home .marquee-row.rev{animation-direction:reverse;animation-duration:56s;margin-top:28px}
+.home .marquee-set{display:flex;align-items:center;gap:48px;padding-right:48px}
+.home .marquee-set img{max-height:44px;max-width:150px;width:auto;height:auto;object-fit:contain}
+.home .brand-marquee:hover .marquee-row{animation-play-state:paused}
+@keyframes home-marquee{to{transform:translateX(-50%)}}
+/* science: video + 3 compact cards */
+.home .sci-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:start}
+.home .sci-cards{display:flex;flex-direction:column;gap:14px}
+.home .sci-cards .card{padding:18px 20px}
+.home .sci-cards .card h3{margin:0 0 5px;font-size:18px}
+.home .sci-cards .card p{margin:0;font-size:14.5px}
+/* insights: solid-colour thumbs, no product photos */
+.home .insight-thumb{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3}
+.home .insight-thumb span{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-size:56px;font-weight:600;line-height:1}
+.home .insight-thumb.solid-navy{background:var(--ink)}
+.home .insight-thumb.solid-navy span{color:var(--gold)}
+.home .insight-thumb.solid-gold{background:var(--gold)}
+.home .insight-thumb.solid-gold span{color:var(--ink)}
+.home .insight-thumb.solid-cream{background:var(--bg)}
+.home .insight-thumb.solid-cream span{color:var(--ink)}
+/* CTA: navy block is the anchor, gold button only */
+.home .cta-dark{background:var(--ink);color:#FAF6EF}
+.home .cta-dark h2{color:#FAF6EF}
+.home .cta-dark .sub{color:#C3CEDD}
+.home .cta-dark .btn{background:var(--gold);color:var(--ink)!important;border-color:var(--gold)}
+.home .cta-dark .btn:hover{background:#D8BC85}
+.home .cta-dark .cta-alt{margin:18px 0 0}
+.home .cta-dark .cta-alt a{color:#C3CEDD;text-decoration:underline;text-underline-offset:3px}
+.home .cta-dark .cta-alt a:hover{color:var(--gold)}
+/* footer: tighter, logo matches header, social links */
+footer.site{padding:36px 0 20px}
+footer.site .copy{margin:16px 0 0}
+footer.site .logo{display:inline-flex;align-items:center;text-decoration:none}
+footer.site .logo img{height:44px;width:auto;display:block}
+footer.site .logo span.logo-oem{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;line-height:1;color:var(--gold);border-left:1px solid rgba(201,168,106,.55);padding-left:12px;margin-left:12px;white-space:nowrap}
+footer.site .social{display:flex;gap:16px;margin-top:14px}
+footer.site .social a{color:#DCE4EE;font-weight:700;font-size:14px}
+/* hamburger: bigger tap target; mobile menu: full-height panel under the header */
+.nav-toggle{padding:12px 4px 12px 12px}
+.nav-toggle span{width:28px;height:3px;margin:6px 0}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+@media(max-width:900px){
+.home section{padding:44px 0}
+.home .hero{padding:48px 0 40px}
+.home .svc-grid{grid-template-columns:1fr}
+.home .ing3{grid-template-columns:1fr}
+.home .sci-wrap{grid-template-columns:1fr}
+.home .why-grid{grid-template-columns:1fr}
+.home .mobile-menu{position:fixed;top:60px;left:0;right:0;bottom:0;z-index:30;overflow-y:auto}
+.home .mobile-menu.is-open{max-height:calc(100vh - 60px);padding:10px 16px 24px}
+.home .stats .wrap{gap:16px}
+}
+@media(max-width:560px){
+.home .shop .card p{display:none}
+.home .shop .card .body{gap:6px}
+.home .marquee-set{gap:32px;padding-right:32px}
+.home .marquee-set img{max-height:32px;max-width:110px}
+.home .marquee-row.rev{margin-top:20px}
+.home .steps{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.home .step{flex:0 0 240px;scroll-snap-align:start;padding:16px 18px}
+.home .step b{font-size:26px}
+.home .step h3{font-size:16px}
+.home .step p{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+.home .marquee-row{animation:none;flex-wrap:wrap;width:auto}
+.home .marquee-set[aria-hidden="true"]{display:none}
+.home .brand-marquee{overflow:visible}
+}
