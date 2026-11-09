@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" width="64" height="72" role="img" aria-label="FDA registered">
+  <path d="M32 3 L57 11 V35 C57 53 47 63 32 68 C17 63 7 53 7 35 V11 Z" fill="none" stroke="#C9A86A" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#C9A86A">FDA</text>
+  <line x1="23" y1="49" x2="41" y2="49" stroke="#C9A86A" stroke-width="2"/>
+</svg>
