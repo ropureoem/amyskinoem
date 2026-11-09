@@ -420,6 +420,10 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .hero-proof li{font-size:15px;font-weight:700;color:#F5EFE6}
 .home .hero-proof li::before{content:"✓";color:var(--gold);font-weight:800;margin-right:8px}
 @media(max-width:900px){.home .hero{padding:48px 0 40px}.home .hero::before{background-position:center}}
+/* ---- home hero on mobile (2026-11-09): blurred face on the right; desktop image untouched ---- */
+@media(max-width:699px){
+.home .hero::before{background-image:url(../img/hero-person-poster-mobile.jpg);background-position:right center}
+}
 /* ---- service cards on mobile: single column, images eager (fixes grey empty boxes) ---- */
 @media(max-width:699px){
 .home .hero p:has(> .btn){display:flex;flex-wrap:wrap;gap:12px}
@@ -504,7 +508,7 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .svc-body{padding:14px 16px}
 }
 /* 2 · Trust band: certification badges + logo labels */
-.cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px}
+.cert-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:8px}
 .cert-badge{border:1px solid rgba(201,168,106,.35);border-radius:12px;padding:18px 14px;text-align:center;background:#181310}
 .cert-badge .cert-icon{display:block;height:44px;width:auto;margin:0 auto 10px}
 .cert-badge b{display:block;color:#F5EFE6;font-size:16px;margin-bottom:4px}
@@ -513,7 +517,6 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .logo-label strong{color:#F5EFE6}
 @media(max-width:699px){
 .cert-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-.cert-badge:last-child{grid-column:span 2}
 }
 /* 3 · R&D + ingredients: team line + compact chips */
 .b-teamline{margin:0 0 14px;font-size:15px;color:#B8B0A4}
