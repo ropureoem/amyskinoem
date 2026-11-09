@@ -416,7 +416,7 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .hero .btn:hover{background:linear-gradient(180deg,#C9A86A 0%,#B89A5E 100%)}
 .home .hero .btn.ghost{background:transparent;border:1.5px solid #F5EFE6;color:#F5EFE6!important}
 .home .hero .btn.ghost:hover{background:rgba(245,239,230,.12)}
-.home .hero-proof{display:flex;gap:10px 28px;flex-wrap:wrap;list-style:none;margin:28px 0 0;padding:22px 0 0;border-top:1px solid rgba(201,168,106,.25)}
+.home .hero-proof{display:flex;gap:10px 28px;flex-wrap:wrap;list-style:none;margin:28px 0 0;padding:22px 0 0;border-top:1px solid rgba(201,168,106,.25);width:fit-content;max-width:100%}
 .home .hero-proof li{font-size:15px;font-weight:700;color:#F5EFE6}
 .home .hero-proof li::before{content:"✓";color:var(--gold);font-weight:800;margin-right:8px}
 @media(max-width:900px){.home .hero{padding:48px 0 40px}.home .hero::before{background-position:center}}
