@@ -406,7 +406,7 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 /* ---- home hero 2026-11-09: real lab photo, blurred, dark overlay (replaces gold-jar render) ---- */
 /* Appended last so it wins over the earlier .home .hero (white) rules; VI rules untouched. */
 .home .hero{position:relative;overflow:hidden;background-color:#0A0908;color:#F5EFE6;padding:64px 0 56px}
-.home .hero::before{content:"";position:absolute;inset:-24px;background-image:url(../img/hero-person-poster.jpg);background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0}
+.home .hero::before{content:"";position:absolute;inset:-24px;background-image:url(../img/hero-founder.jpg);background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0}
 .home .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.88) 0%,rgba(10,9,8,.62) 55%,rgba(10,9,8,.35) 100%);z-index:1}
 .home .hero .wrap{position:relative;z-index:2}
 .home .hero h1{color:#F5EFE6}
