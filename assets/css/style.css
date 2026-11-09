@@ -421,8 +421,9 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .hero-proof li::before{content:"✓";color:var(--gold);font-weight:800;margin-right:8px}
 @media(max-width:900px){.home .hero{padding:48px 0 40px}.home .hero::before{background-position:center}}
 /* ---- home hero on mobile (2026-11-09): blurred face on the right; desktop image untouched ---- */
+/* 2026-11-09 mobile fix: smaller right-side element (60% width), sharp face, no blur; desktop untouched */
 @media(max-width:699px){
-.home .hero::before{background-image:url(../img/hero-person-poster-mobile.jpg);background-position:right center}
+.home .hero::before{background-image:url(../img/hero-person-poster-mobile.jpg);background-position:right center;background-size:60% auto}
 }
 /* ---- service cards on mobile: single column, images eager (fixes grey empty boxes) ---- */
 @media(max-width:699px){
