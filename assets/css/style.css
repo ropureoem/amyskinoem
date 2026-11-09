@@ -396,8 +396,8 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 /* ---- home hero 2026-11-09: real lab photo, blurred, dark overlay (replaces gold-jar render) ---- */
 /* Appended last so it wins over the earlier .home .hero (white) rules; VI rules untouched. */
 .home .hero{position:relative;overflow:hidden;background-color:#0A0908;color:#F5EFE6;padding:64px 0 56px}
-.home .hero::before{content:"";position:absolute;inset:-24px;background-image:url(../img/research/wangsha-formulation-lab-p27.jpg);background-position:center;background-size:cover;background-repeat:no-repeat;filter:blur(12px);z-index:0}
-.home .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(10,9,8,.74),rgba(10,9,8,.80));z-index:1}
+.home .hero::before{content:"";position:absolute;inset:-24px;background-image:url(../img/hero-person-poster.jpg);background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0}
+.home .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.88) 0%,rgba(10,9,8,.62) 55%,rgba(10,9,8,.35) 100%);z-index:1}
 .home .hero .wrap{position:relative;z-index:2}
 .home .hero h1{color:#F5EFE6}
 .home .hero p.lead{color:#EDE6D8}
@@ -452,3 +452,79 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .cta-dark.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.55),rgba(10,9,8,.82));z-index:1}
 .cta-dark.poster .wrap{position:relative;z-index:2}
 @media(max-width:699px){.card.poster{min-height:280px}.poster-band{padding:32px 22px}}
+
+/* ---- 2026-11-09 homepage consolidation: 6 sections ---- */
+/* 1 · Hero: person poster + services strip inside hero */
+.home .hero .svc-strip{position:relative;z-index:2;margin-top:48px}
+.home .svc-card{flex-direction:row;align-items:center}
+.home .svc-thumb{flex:0 0 88px;width:88px;height:88px;overflow:hidden;background:#F5EFE6}
+.home .svc-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.home .svc-body{padding:16px 18px;gap:6px}
+.home .svc-body h3{font-size:17px}
+.home .svc-body p{font-size:13.5px}
+@media(max-width:699px){
+.home .hero .svc-strip{margin-top:36px}
+.home .svc-thumb{flex-basis:76px;width:76px;height:76px}
+.home .svc-body{padding:14px 16px}
+}
+/* 2 · Trust band: certification badges + logo labels */
+.cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px}
+.cert-badge{border:1px solid rgba(201,168,106,.35);border-radius:12px;padding:18px 14px;text-align:center;background:#181310}
+.cert-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-weight:800;font-size:16px;margin-bottom:10px}
+.cert-badge b{display:block;color:#F5EFE6;font-size:16px;margin-bottom:4px}
+.cert-badge span{display:block;color:#B8B0A4;font-size:12.5px;line-height:1.5}
+.logo-label{margin:36px 0 14px;font-size:14px;color:#B8B0A4}
+.logo-label strong{color:#F5EFE6}
+@media(max-width:699px){
+.cert-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+.cert-badge:last-child{grid-column:span 2}
+}
+/* 3 · R&D + ingredients: team line + compact chips */
+.b-teamline{margin:0 0 14px;font-size:15px;color:#F5EFE6}
+.home .ing-groups{display:flex;flex-direction:column;gap:14px}
+.home .ing-group h3{margin:0 0 8px;font-size:17px}
+.home .ing-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.home .ing-chips .ing-chip{padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.home .ing-chips .ing-chip b{display:inline;font-size:13px}
+.home .ing-chips .ing-chip span{display:inline;color:var(--muted);font-size:13px;margin-top:0}
+.home .ing-custom{margin:0;font-size:13.5px;color:#B8B0A4}
+.home .ing-custom b{color:#F5EFE6}
+@media(max-width:699px){
+.home .ing-chips{grid-template-columns:repeat(2,1fr);gap:5px}
+.home .ing-chips .ing-chip{font-size:12px;padding:6px 8px}
+.home .ing-chips .ing-chip.wide{grid-column:span 2}
+}
+/* 5 · Process: compact 6-step strip */
+.home .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;overflow:visible;padding-bottom:0}
+.home .step{flex:none;padding:14px 12px}
+.home .step b{font-size:22px}
+.home .step h3{font-size:15px}
+.home .step p{font-size:12.5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:699px){
+.home .steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.home .step{flex:0 0 200px;scroll-snap-align:start;padding:14px}
+}
+/* 6 · Insights: compact cards */
+.home .grid .card.poster{min-height:0;justify-content:flex-start;padding:0 0 14px}
+.home .grid .card.poster::before{position:relative;inset:auto;display:block;width:100%;height:110px;background-size:cover;background-position:center;filter:none}
+.home .grid .card.poster::after{display:none}
+.home .grid .card.poster .b-insight-num{aspect-ratio:auto;background:transparent;border:0;margin:12px 14px 2px;justify-content:flex-start}
+.home .grid .card.poster .b-insight-num span{font-size:20px}
+.home .grid .card.poster .tag{margin:0 14px}
+.home .grid .card.poster h3{font-size:16px;margin:2px 14px 4px}
+.home .grid .card.poster p{font-size:13px;margin:0 14px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:699px){
+.home .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+.home .grid .card.poster::before{height:84px}
+.home .grid .card.poster h3{font-size:15px}
+}
+/* 6 · FAQ: compact two-column */
+.home .b-faq{grid-template-columns:repeat(2,1fr)}
+.home .b-faq .card{padding:14px 16px}
+.home .b-faq .card h3{font-size:16px}
+.home .b-faq .card p{font-size:13.5px;margin:6px 0 0}
+@media(max-width:699px){
+.home .b-faq{grid-template-columns:1fr}
+.home .b-faq .card{padding:12px 14px}
+}/* Hero: mobile keeps the person visible on the right */
+@media(max-width:900px){.home .hero::before{background-position:right center}}
