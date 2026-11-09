@@ -79,7 +79,7 @@ footer.site .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}footer
 .spec dt{font-weight:700}.spec dd{margin:0;color:var(--muted)}
 .checks{list-style:none;padding:0;margin:18px 0}.checks li{padding:8px 0 8px 30px;position:relative}
 .checks li:before{content:"✓";position:absolute;left:4px;color:var(--ink);font-weight:800}
-.related{padding:0 0 72px}.related h2{font-size:26px}
+.related{padding:0 0 72px}.related h2{font-size:26px}.related .shop{grid-template-columns:repeat(3,1fr)}
 /* product images: clean self-hosted renders, one consistent frame */
 .pframe{max-width:440px;margin:0 auto 1.2rem}
 .pframe .pimg{position:relative;overflow:hidden;border:1px solid #e7e2d8;border-radius:10px;background:var(--bg);aspect-ratio:4/5}
@@ -112,8 +112,8 @@ body.vi-page h1,body.vi-page h2,body.vi-page h3{font-family:'Cormorant Garamond'
 body.vi-page .kit-card h3{font-weight:400}
 body.vi-page .eyebrow{letter-spacing:.2em;font-weight:400}
 body.vi-page .btn{font-weight:400;letter-spacing:.04em}
-@media(max-width:900px){.hero-grid,.detail{grid-template-columns:1fr}.shop{grid-template-columns:repeat(2,1fr)}.grid,.swatches,.mock-grid,.kit-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.stats .wrap{grid-template-columns:repeat(2,1fr)}nav.main{display:none}footer.site .cols{grid-template-columns:1fr}section{padding:52px 0}.vi-sec{padding:24px}.nav{padding:10px 16px}.logo img{height:40px}}
-@media(max-width:560px){.shop,.grid,.swatches,.mock-grid,.kit-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:900px){.hero-grid,.detail{grid-template-columns:1fr}.shop{grid-template-columns:repeat(2,1fr)}.related .shop{grid-template-columns:repeat(2,1fr)}.grid,.swatches,.mock-grid,.kit-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.stats .wrap{grid-template-columns:repeat(2,1fr)}nav.main{display:none}footer.site .cols{grid-template-columns:1fr}section{padding:52px 0}.vi-sec{padding:24px}.nav{padding:10px 16px}.logo img{height:40px}}
+@media(max-width:560px){.shop,.grid,.swatches,.mock-grid,.kit-grid{grid-template-columns:1fr}.related .shop{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
 @media(min-width:901px){.mobile-only{display:none}}
 
 /* ---- home redesign: hero carousel, cert line, video slot, fade-up ---- */
@@ -411,6 +411,7 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .hero::before{content:"";position:absolute;inset:-24px;background-image:url(../img/hero-founder-v6.jpg);background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0}
 .home .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.88) 0%,rgba(10,9,8,.62) 55%,rgba(10,9,8,.35) 100%);z-index:1}
 .home .hero .wrap{position:relative;z-index:2}
+.home .hero-model{display:none}
 .home .hero h1{color:#F5EFE6}
 .home .hero p.lead{color:#EDE6D8}
 .home .hero .eyebrow{color:var(--gold);border-bottom:2px solid var(--gold)}
@@ -426,8 +427,9 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 /* 2026-11-09 mobile fix 3: text goes full-width OVER the image (no more 58% squeeze);
    image is full-bleed cover, heavily darkened so white text stays readable; model only faintly visible */
 @media(max-width:699px){
-.home .hero::before{background-image:url(../img/hero-founder-v6-mobile.jpg);background-position:center right;background-size:cover}
-.home .hero::after{background:linear-gradient(90deg,rgba(10,9,8,.94) 0%,rgba(10,9,8,.88) 40%,rgba(10,9,8,.78) 65%,rgba(10,9,8,.62) 100%)}
+.home .hero::before{background-image:none}
+.home .hero::after{background:linear-gradient(90deg,rgba(10,9,8,.88) 0%,rgba(10,9,8,.78) 40%,rgba(10,9,8,.55) 65%,rgba(10,9,8,.32) 100%)}
+.home .hero-model{display:block;position:absolute;top:90px;right:-30px;width:420px;z-index:0;pointer-events:none}
 .home .hero{padding:36px 0 28px}
 .home .hero > .wrap:first-child{max-width:100%;margin-left:0}
 .home .hero .eyebrow{font-size:11px;margin-bottom:12px;padding-bottom:8px}
