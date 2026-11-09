@@ -387,11 +387,11 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .supplier-row .marquee-set{gap:36px;padding-right:36px}
 .home .supplier-row .marquee-set img{max-height:26px;max-width:100px}
 }
+.supp-note{text-align:center;color:#3D362C;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:26px 0 16px}
 @media(prefers-reduced-motion:reduce){
 .home .supplier-row{animation:none;flex-wrap:wrap;width:auto}
 .home .supplier-row .marquee-set[aria-hidden="true"]{display:none}
 .home .supplier-marquee{overflow:visible}
-.supp-note{text-align:center;color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:26px 0 16px}
 }
 
 /* ---- home hero 2026-11-09: real lab photo, blurred, dark overlay (replaces gold-jar render) ---- */
@@ -481,15 +481,15 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .cert-badge:last-child{grid-column:span 2}
 }
 /* 3 · R&D + ingredients: team line + compact chips */
-.b-teamline{margin:0 0 14px;font-size:15px;color:#3D362C}
+.b-teamline{margin:0 0 14px;font-size:15px;color:#B8B0A4}
 .home .ing-groups{display:flex;flex-direction:column;gap:14px}
 .home .ing-group h3{margin:0 0 8px;font-size:17px}
 .home .ing-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .home .ing-chips .ing-chip{padding:6px 10px;font-size:13px}
 .home .ing-chips .ing-chip b{display:inline;font-size:13px;color:#0A0908}
 .home .ing-chips .ing-chip span{display:inline;color:#3D362C;font-size:13px;margin-top:0}
-.home .ing-custom{margin:0;font-size:13.5px;color:#6E6455}
-.home .ing-custom b{color:#0A0908}
+.home .ing-custom{margin:0;font-size:13.5px;color:#B8B0A4}
+.home .ing-custom b{color:#F5EFE6}
 @media(max-width:699px){
 .home .ing-chips{grid-template-columns:repeat(2,1fr);gap:5px}
 .home .ing-chips .ing-chip{font-size:12px;padding:6px 8px}
@@ -500,14 +500,14 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .step{flex:none;padding:14px 12px}
 .home .step b{font-size:22px}
 .home .step h3{font-size:15px}
-.home .step p{font-size:12.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.home .step p{font-size:12.5px}
 @media(max-width:699px){
 .home .steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
 .home .step{flex:0 0 200px;scroll-snap-align:start;padding:14px}
 }
 /* 6 · Insights: compact cards */
 .home .grid .card.poster{min-height:0;justify-content:flex-start;padding:0 0 14px}
-.home .grid .card.poster::before{position:relative;inset:auto;display:block;width:100%;height:150px;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:var(--bg);filter:none}
+.home .grid .card.poster::before{position:relative;inset:auto;display:block;width:100%;height:150px;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#F5EFE6;filter:none}
 .home .grid .card.poster::after{display:none}
 .home .grid .card.poster .b-insight-num{aspect-ratio:auto;background:transparent;border:0;margin:12px 14px 2px;justify-content:flex-start}
 .home .grid .card.poster .b-insight-num span{font-size:20px}
