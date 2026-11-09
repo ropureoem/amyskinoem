@@ -9,7 +9,7 @@ header.site{position:sticky;top:0;background:var(--ink);border-bottom:1px solid 
 header.site .logo,header.site .logo span{color:#FAF6EF}
 header.site .btn{background:linear-gradient(180deg,#D8BC7E 0%,#C9A86A 100%);color:var(--ink)!important;border-color:var(--gold)}
 header.site .btn:hover{background:linear-gradient(180deg,#C9A86A 0%,#B89A5E 100%)}
-.nav{display:flex;align-items:center;gap:18px;padding:12px 20px;max-width:1480px;margin:0 auto}
+.nav{display:flex;align-items:center;gap:18px;padding:9px 20px;max-width:1480px;margin:0 auto}
 .logo{font-size:22px;letter-spacing:.3px;color:var(--ink)}.logo span{color:var(--ink)}
 .logo img{height:44px;vertical-align:middle}
 nav.main{margin-left:auto;display:flex;gap:12px;flex-wrap:nowrap;align-items:center}nav.main a{color:#F5EFE6;font-weight:400;font-size:14px;white-space:nowrap}nav.main a:hover{color:var(--gold);text-decoration:none}
@@ -45,7 +45,7 @@ h2{font-size:clamp(26px,3.4vw,36px);line-height:1.35;margin:0 0 12px;letter-spac
 .shop .card .pimg{aspect-ratio:4/5;background:var(--bg);overflow:hidden}
 .shop .card .pimg img{width:100%;height:100%;object-fit:contain;display:block}
 .shop .card .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.shop .card h3{margin:0;font-size:17px;line-height:1.35}
+.shop .card h3{margin:0;font-size:17px;line-height:1.35;min-height:calc(2 * 1.35em)}
 .shop .card p{margin:0;color:var(--muted);font-size:14px;flex:1}
 .shop .card .row{display:flex;gap:8px;margin-top:6px;flex-wrap:nowrap}
 .shop .card .row .btn{padding:9px 10px;font-size:12.5px;flex:1;text-align:center;white-space:nowrap}
@@ -146,7 +146,7 @@ footer.site .copy{margin:28px 0 0}
 
 /* ---- header + nav redesign (2026-11-06): tight logo lockup, hamburger on mobile ---- */
 header.site .logo{display:inline-flex;align-items:center;text-decoration:none;flex-shrink:0}
-header.site .logo img{height:38px;width:auto;display:block}
+header.site .logo img{height:36px;width:auto;display:block}
 header.site .logo span.logo-oem{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;line-height:1;color:var(--gold);border-left:1px solid rgba(201,168,106,.25);padding-left:12px;margin-left:12px;white-space:nowrap}
 nav.main a:not(.btn){padding-bottom:3px;border-bottom:2px solid transparent;letter-spacing:.4px}
 nav.main a:not(.btn):hover{color:var(--gold);border-bottom-color:var(--gold);text-decoration:none}
@@ -254,8 +254,8 @@ body.home section.alt{background:#fff}
 .home .svc-body h3{margin:0;font-size:19px}
 .home .svc-body p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
 .home .svc-link{font-weight:700;border-bottom:2px solid var(--gold);padding-bottom:2px;align-self:flex-start}
-/* product cards: natural heights, no forced equal-height blank space */
-.home .shop{align-items:start}
+/* product cards: equal-height rows, bottoms aligned (stretch + two-line h3) */
+.home .shop{align-items:stretch}
 /* ingredients: 3 groups, each ingredient named once */
 .home .ing3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .home .ing-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
@@ -275,7 +275,8 @@ body.home section.alt{background:#fff}
 .home .marquee-row{display:flex;width:max-content;animation:home-marquee 46s linear infinite}
 .home .marquee-row.rev{animation-direction:reverse;animation-duration:56s;margin-top:28px}
 .home .marquee-set{display:flex;align-items:center;gap:48px;padding-right:48px}
-.home .marquee-set img{max-height:44px;max-width:150px;width:auto;height:auto;object-fit:contain}
+.home .marquee-set .logo-cell{flex:0 0 auto;width:170px;height:64px;display:flex;align-items:center;justify-content:center}
+.home .marquee-set .logo-cell img{max-height:36px;max-width:140px;width:auto;height:auto;object-fit:contain}
 .home .brand-marquee:hover .marquee-row{animation-play-state:paused}
 @keyframes home-marquee{to{transform:translateX(-50%)}}
 /* science: video + 3 compact cards */
@@ -322,8 +323,8 @@ footer.site .social a{color:#F5EFE6;font-weight:700;font-size:14px}
 .home .ing3{grid-template-columns:1fr}
 .home .sci-wrap{grid-template-columns:1fr}
 .home .why-grid{grid-template-columns:1fr}
-.home .mobile-menu{position:fixed;top:60px;left:0;right:0;bottom:0;z-index:30;overflow-y:auto}
-.home .mobile-menu.is-open{max-height:calc(100vh - 60px);padding:10px 16px 24px}
+.home .mobile-menu{position:fixed;top:88px;left:0;right:0;bottom:0;z-index:30;overflow-y:auto}
+.home .mobile-menu.is-open{max-height:calc(100vh - 88px);padding:10px 16px 24px}
 .home .stats .wrap{gap:16px}
 }
 @media(max-width:560px){
@@ -376,18 +377,26 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 .home .step{flex:0 0 240px;scroll-snap-align:start;padding:16px 18px}
 
 /* ---- suppliers row (added 2026-11-08): slow single-row marquee on a white band, below brand wall ---- */
-.home .suppliers{background:#fff;border-top:1px solid var(--line)}
+.home .suppliers{background:#fff;border:1px solid rgba(201,168,106,.25);border-radius:14px;padding:28px 0;overflow:hidden;width:calc(100% - 48px);max-width:1152px;margin:28px auto 0}
+.home .suppliers .wrap{padding:0}
 .home .suppliers .sec-head{margin-bottom:28px}
 .home .supplier-marquee{overflow:hidden}
 .home .supplier-row{animation-duration:90s}
 .home .supplier-row .marquee-set{gap:56px;padding-right:56px}
-.home .supplier-row .marquee-set img{max-height:34px;max-width:140px;width:auto;height:auto;object-fit:contain}
+.home .supplier-row .marquee-set .logo-cell{width:160px;height:56px}
+.home .supplier-row .marquee-set .logo-cell img{max-height:30px;max-width:130px;width:auto;height:auto;object-fit:contain}
 .home .supplier-marquee:hover .marquee-row{animation-play-state:paused}
 @media(max-width:560px){
 .home .supplier-row .marquee-set{gap:36px;padding-right:36px}
-.home .supplier-row .marquee-set img{max-height:26px;max-width:100px}
+.home .supplier-row .marquee-set .logo-cell{width:120px;height:44px}
+.home .supplier-row .marquee-set .logo-cell img{max-height:26px;max-width:100px}
 }
 .supp-note{text-align:center;color:#3D362C;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:26px 0 16px}
+@media(max-width:699px){
+.home .marquee-set{gap:28px;padding-right:28px}
+.home .marquee-set .logo-cell{width:120px;height:48px}
+.home .marquee-set .logo-cell img{max-height:28px;max-width:100px}
+}
 @media(prefers-reduced-motion:reduce){
 .home .supplier-row{animation:none;flex-wrap:wrap;width:auto}
 .home .supplier-row .marquee-set[aria-hidden="true"]{display:none}
@@ -431,6 +440,32 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .topbar i{font-style:normal;color:var(--gold)}
 .topbar:hover .wrap{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.topbar .wrap{animation:none;width:auto;max-width:1200px;flex-wrap:wrap;justify-content:center}.topbar-set[aria-hidden="true"]{display:none}.topbar{overflow:visible}}
+/* 2026-11-09: sticky mobile topbar (mirrors ropureoem: topbar pinned at top on scroll, header sits beneath it). Mobile only (<=699px); desktop untouched. Topbar fixed height 35px (measured: 12px text at 1.75 line-height + 7px padding each side) so the sticky header can sit exactly beneath it at top:35px. Marquee animation untouched. Reduced-motion: topbar back to normal flow (height auto) so wrapped content is never clipped. */
+@media(max-width:699px){
+  .topbar{position:sticky;top:0;z-index:31;height:35px}
+  .topbar .wrap{height:35px;padding:0}
+  header.site{top:35px;z-index:30}
+  html{scroll-padding-top:88px}
+}
+@media(max-width:699px) and (prefers-reduced-motion:reduce){
+  .topbar{position:static;height:auto}
+  .topbar .wrap{height:auto;padding:7px 0}
+  header.site{top:0}
+}
+/* 2026-11-09: shorter mobile nav (measured 77px, target <=56px; the hamburger toggle was the driver at 57px, not the logo). */
+@media(max-width:900px){
+  .nav{padding:6px 16px}
+  header.site .logo img{height:32px}
+  .nav-toggle{padding:8px 4px 8px 12px}
+  .nav-toggle span{margin:4px 0}
+  .nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+/* 2026-11-09: tighten only the ingredients -> All products junction on mobile (was 44+44=88px; 20+20=40px padding, ~47px measured incl. eyebrow line-box). */
+@media(max-width:900px){
+  .home section:has(.ing-groups){padding-bottom:20px}
+  .home section:has(.shop){padding-top:20px}
+}
 .card.poster{position:relative;overflow:hidden;background:#0A0908;border:1px solid rgba(201,168,106,.35);color:#F5EFE6;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
 .card.poster::before{content:"";position:absolute;inset:-18px;background-image:var(--bg);background-size:cover;background-position:center;filter:blur(14px) brightness(.66);z-index:0}
 .card.poster::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.16) 0%,rgba(10,9,8,.55) 55%,rgba(10,9,8,.86) 100%);z-index:1}
@@ -471,7 +506,7 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 /* 2 · Trust band: certification badges + logo labels */
 .cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px}
 .cert-badge{border:1px solid rgba(201,168,106,.35);border-radius:12px;padding:18px 14px;text-align:center;background:#181310}
-.cert-mark{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-weight:800;font-size:16px;margin-bottom:10px}
+.cert-badge .cert-icon{display:block;height:44px;width:auto;margin:0 auto 10px}
 .cert-badge b{display:block;color:#F5EFE6;font-size:16px;margin-bottom:4px}
 .cert-badge span{display:block;color:#B8B0A4;font-size:12.5px;line-height:1.5}
 .logo-label{margin:36px 0 14px;font-size:14px;color:#B8B0A4}
@@ -519,13 +554,22 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .grid .card.poster::before{height:84px}
 .home .grid .card.poster h3{font-size:15px}
 }
-/* 6 · FAQ: compact two-column */
-.home .b-faq{grid-template-columns:repeat(2,1fr)}
-.home .b-faq .card{padding:14px 16px}
-.home .b-faq .card h3{font-size:16px}
-.home .b-faq .card p{font-size:13.5px;margin:6px 0 0}
-@media(max-width:699px){
+/* 6 · FAQ: single-column accordion (details/summary, first item open) */
 .home .b-faq{grid-template-columns:1fr}
-.home .b-faq .card{padding:12px 14px}
+.home .b-faq details.card{padding:0}
+.home .b-faq details.card summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;list-style:none;padding:14px 16px}
+.home .b-faq details.card summary::-webkit-details-marker{display:none}
+.home .b-faq details.card summary::marker{content:""}
+.home .b-faq .card h3{font-size:16px;margin:0}
+.home .b-faq .card p{font-size:13.5px;margin:0;padding:0 16px 14px}
+.home .b-faq .faq-mark{flex:0 0 auto;width:18px;height:18px;position:relative}
+.home .b-faq .faq-mark::before,.home .b-faq .faq-mark::after{content:"";position:absolute;left:50%;top:50%;background:var(--gold);transition:transform .2s ease,opacity .2s ease}
+.home .b-faq .faq-mark::before{width:14px;height:2px;transform:translate(-50%,-50%)}
+.home .b-faq .faq-mark::after{width:2px;height:14px;transform:translate(-50%,-50%)}
+.home .b-faq details[open] .faq-mark::after{transform:translate(-50%,-50%) scaleY(0);opacity:0}
+.home .b-faq details[open]{border-color:rgba(201,168,106,.5)}
+@media(max-width:699px){
+.home .b-faq details.card summary{padding:12px 14px}
+.home .b-faq .card p{padding:0 14px 12px}
 }/* Hero: mobile keeps the person visible on the right */
 @media(max-width:900px){.home .hero::before{background-position:right center}}
