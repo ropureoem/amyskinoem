@@ -429,14 +429,14 @@ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
 @media(max-width:699px){
 .home .hero::before{background-image:none}
 .home .hero::after{background:linear-gradient(90deg,rgba(10,9,8,.88) 0%,rgba(10,9,8,.78) 40%,rgba(10,9,8,.55) 65%,rgba(10,9,8,.32) 100%)}
-.home .hero-model{display:block;position:absolute;top:90px;right:-30px;width:420px;z-index:0;pointer-events:none}
-.home .hero{padding:36px 0 28px}
+.home .hero-model{display:block;position:absolute;top:210px;right:-60px;width:500px;max-width:none;z-index:0;pointer-events:none}
+.home .hero{padding:14px 0 28px}
 .home .hero > .wrap:first-child{max-width:100%;margin-left:0}
 .home .hero .eyebrow{font-size:11px;margin-bottom:12px;padding-bottom:8px}
 .home .hero h1{font-size:28px;line-height:1.15;margin-bottom:12px}
 .home .hero p.lead{font-size:15px;line-height:1.55;margin-bottom:14px}
 .home .hero p:has(> .btn) .btn{font-size:13px;padding:11px 16px;white-space:nowrap}
-.home .hero-proof{margin-top:18px;padding-top:16px;gap:8px 20px}
+.home .hero-proof{margin-top:18px;padding-top:16px;gap:8px 20px;max-width:220px}
 .home .hero-proof li{font-size:13px}
 }
 /* ---- service cards on mobile: single column, images eager (fixes grey empty boxes) ---- */
