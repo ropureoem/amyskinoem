@@ -9,10 +9,10 @@ header.site{position:sticky;top:0;background:var(--ink);border-bottom:1px solid 
 header.site .logo,header.site .logo span{color:#FAF6EF}
 header.site .btn{background:linear-gradient(180deg,#D8BC7E 0%,#C9A86A 100%);color:var(--ink)!important;border-color:var(--gold)}
 header.site .btn:hover{background:linear-gradient(180deg,#C9A86A 0%,#B89A5E 100%)}
-.nav{display:flex;align-items:center;gap:18px;padding:14px 24px;max-width:1200px;margin:0 auto}
+.nav{display:flex;align-items:center;gap:18px;padding:14px 24px;max-width:1440px;margin:0 auto}
 .logo{font-size:22px;letter-spacing:.3px;color:var(--ink)}.logo span{color:var(--ink)}
 .logo img{height:44px;vertical-align:middle}
-nav.main{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap;align-items:center}nav.main a{color:#F5EFE6;font-weight:400;font-size:15px}nav.main a:hover{color:var(--gold);text-decoration:none}
+nav.main{margin-left:auto;display:flex;gap:16px;flex-wrap:nowrap;align-items:center}nav.main a{color:#F5EFE6;font-weight:400;font-size:15px;white-space:nowrap}nav.main a:hover{color:var(--gold);text-decoration:none}
 .btn{display:inline-block;background:linear-gradient(180deg,#D8BC7E 0%,#C9A86A 100%);color:#0A0908!important;padding:13px 26px;border-radius:999px;font-weight:400;letter-spacing:.04em;border:0;cursor:pointer}.btn:hover{background:linear-gradient(180deg,#C9A86A 0%,#B89A5E 100%);text-decoration:none}
 .btn.ghost{background:#fff;color:var(--ink)!important;border:1.5px solid var(--ink)}
 .btn.wa{background:#25d366;color:#fff!important}.btn.small{padding:10px 18px;font-size:14px}
@@ -234,7 +234,7 @@ nav.main a:not(.btn):hover{color:var(--gold);border-bottom-color:var(--gold);tex
 h1,h2,h3,.logo{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
 body.home{background:var(--bg)}
 body.home section.alt{background:#fff}
-.home section{padding:64px 0}
+.home section{padding:48px 0}
 /* kill the scroll fade-up (home.js still adds .reveal, CSS makes it a no-op) */
 .home .reveal{opacity:1;transform:none;transition:none}
 /* hero: white band, static, gold primary + outline WhatsApp (no green) */
@@ -484,9 +484,9 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .ing-groups{display:flex;flex-direction:column;gap:14px}
 .home .ing-group h3{margin:0 0 8px;font-size:17px}
 .home .ing-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.home .ing-chips .ing-chip{padding:6px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.home .ing-chips .ing-chip{padding:6px 10px;font-size:13px}
 .home .ing-chips .ing-chip b{display:inline;font-size:13px}
-.home .ing-chips .ing-chip span{display:inline;color:var(--muted);font-size:13px;margin-top:0}
+.home .ing-chips .ing-chip span{display:inline;color:#3D362C;font-size:13px;margin-top:0}
 .home .ing-custom{margin:0;font-size:13.5px;color:#B8B0A4}
 .home .ing-custom b{color:#F5EFE6}
 @media(max-width:699px){
@@ -499,14 +499,14 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .step{flex:none;padding:14px 12px}
 .home .step b{font-size:22px}
 .home .step h3{font-size:15px}
-.home .step p{font-size:12.5px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.home .step p{font-size:12.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:699px){
 .home .steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
 .home .step{flex:0 0 200px;scroll-snap-align:start;padding:14px}
 }
 /* 6 · Insights: compact cards */
 .home .grid .card.poster{min-height:0;justify-content:flex-start;padding:0 0 14px}
-.home .grid .card.poster::before{position:relative;inset:auto;display:block;width:100%;height:110px;background-size:cover;background-position:center;filter:none}
+.home .grid .card.poster::before{position:relative;inset:auto;display:block;width:100%;height:150px;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:var(--bg);filter:none}
 .home .grid .card.poster::after{display:none}
 .home .grid .card.poster .b-insight-num{aspect-ratio:auto;background:transparent;border:0;margin:12px 14px 2px;justify-content:flex-start}
 .home .grid .card.poster .b-insight-num span{font-size:20px}
