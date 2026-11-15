@@ -632,3 +632,39 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 [dir="rtl"] header.site .language-switch{gap:4px}
 [dir="rtl"] header.site .nav{gap:12px}
 }
+
+/* 2026-11-15 fix: page width 1663px at 1280px viewport (EN home,
+   categories, every page sharing this header) — NOT the topbar
+   marquee. Measured root cause: header .language-switch is 12 pill
+   links, 603px wide, flex-shrink:0, inside a nowrap .nav
+   (logo 261 + nav.main 735 + switcher 603 = 1635px + gaps/padding),
+   so it sticks out past the viewport and sets document scrollWidth
+   to 1663. The topbar marquee is innocent: .topbar has
+   overflow:hidden and clips its 1894px .wrap, and the brand/supplier
+   marquees are overflow:hidden at desktop too. Fix: compact the
+   pills (12px, tighter padding), tighten .nav / nav.main gaps, and
+   clip any residual header overflow so the header can never widen
+   the page again (footer and mobile menu still carry the full
+   switcher). 901-1439px: the switcher moves to its own second row,
+   single row, right-aligned — one uniform header (~105px) in all 12
+   languages instead of a 2-row stack on EN and a 4-row stack on
+   DE/IT/RU, whose nav labels are wider. 1440-1699px: compact two-row
+   switcher beside the nav (fits: header 80px). >=1700px: full
+   single-row switcher again (261+703+603+gaps+padding < 1700).
+   NOTE: below ~1020px the desktop nav itself (logo + main) cannot
+   fit (hamburger only appears <=900px); if that range matters, raise
+   the hamburger breakpoint instead of widening the page. */
+@media(min-width:901px){
+  .nav{gap:12px}
+  nav.main{gap:8px}
+  header.site{overflow-x:clip}
+  header.site .language-switch{flex-wrap:wrap;flex:0 1 auto;min-width:0;max-width:230px;justify-content:flex-end;gap:4px}
+  header.site .language-switch a{padding:5px 8px;font-size:12px;letter-spacing:0}
+}
+@media(min-width:901px) and (max-width:1439px){
+  .nav{flex-wrap:wrap}
+  header.site .language-switch{flex:0 0 100%;max-width:none}
+}
+@media(min-width:1700px){
+  header.site .language-switch{flex-wrap:nowrap;max-width:none}
+}
