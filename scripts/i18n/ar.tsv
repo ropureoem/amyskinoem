@@ -1,6 +1,3 @@
-# Amy Skin ar.tsv — Arabic glossary (EN<TAB>AR). Text nodes matched after whitespace normalisation.
-# Rules: numbers, units, model/cert names, brand names (Amy Skin), MOQ/OEM/ODM/SPF50 stay verbatim.
-# Full-sentence entries first; the builder also applies phrase entries inside longer strings (longest-first).
 OEM Skincare Manufacturer. Built for Your Brand. | Amy Skin OEM	شركة تصنيع منتجات العناية بالبشرة OEM. صُممت لعلامتك التجارية. | Amy Skin OEM
 Guangzhou, China	قوانغتشو، الصين
 OEM / ODM since 2006	OEM / ODM منذ 2006
@@ -378,7 +375,7 @@ Amino Acid Cleanser	منظف الأحماض الأمينية
 Tube · stacked logo · real product photo	- شعار مثبت - صورة منتجة حقيقية
 Hydrating Toner	تونر مرطب
 Bottle · real product photo	صورة منتج حقيقي
-Sheet Mask	& الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت الكت
+Sheet Mask	قناع ورقي
 Pouch · stacked logo · real product photo	- شعار مكدس - صورة منتج حقيقي
 Body Lotion	لوشن الجسم
 Pump bottle · real product photo	صورة منتج حقيقي
@@ -516,7 +513,7 @@ Purifying Facial Cleanser	منظف الوجه المنقي
 Ginseng, Tiger Grass, Green Tea	جينسينغ، نمر، أخضر شاي
 Deep purification	تنقية عميقة
 Cleanser 125 ml	منظف 125 مل
-Houttuynia Cleansing Spray	(أ) منظّفات التنظيف
+Houttuynia Cleansing Spray	بخاخ التنظيف بالهوتنيا
 89% Heartleaf Extract, Hydrolyzed Collagen, Sodium Hyaluronate	مستخلص هوتاينيا 89%، كولاجين متحلل، هيالورونات الصوديوم
 Rinse-free cleansing	التطهير من التطهير من الساعة
 Cleansing spray 100 ml	الرش النظيف لـ 100 مل
@@ -934,7 +931,7 @@ Centella Amino Acid Skin Care Set — Amy Skin private label skin care set	مج�
 Color Changing Lip Oil — Amy Skin private label lip oil	زيت شفاه متغير اللون — زيت شفاه Amy Skin ذو العلامة الخاصة
 Green Tea Facial Cleanser — Amy Skin private label	منظف الوجه بالشاي الأخضر — علامة Amy Skin الخاصة
 Hydrogel V Face Patch — Amy Skin private label	رقعة الوجه الهيدروجيل V — علامة Amy Skin الخاصة
-Leucocyte Firming Face Mask — Amy Skin private label	قناع وجه وجه الوجه الواضع - بطاقة Amy Skinة خاصة
+Leucocyte Firming Face Mask — Amy Skin private label	قناع وجه مشدود بمستخلص كريات الدم البيضاء — علامة Amy Skin الخاصة
 Moisturising Cream — Amy Skin private label cream jar	كريم مرطب — علبة كريم Amy Skin ذات العلامة الخاصة
 Niacinamide Serum — Amy Skin private label serum bottle	سيروم النياسيناميد — زجاجة سيروم Amy Skin ذات العلامة الخاصة
 Pink Collagen Crystal Lip Masks — Amy Skin private label	أقنعة شفاه وردية بكولاجين كريستالي — علامة Amy Skin الخاصة
@@ -988,11 +985,11 @@ Cocoa Butter Sugar Scrub Strawberry — Private Label Body Scrub Manufacturer | 
 Color Changing Lip Oil — Private Label Lip Care Manufacturer | Amy Skin OEM	زيت شفاه متغير اللون — شركة تصنيع العناية بالشفاه للعلامات الخاصة | Amy Skin OEM
 Green Tea Facial Cleanser — Private Label Cleanser Manufacturer | Amy Skin OEM	منظف الوجه بالشاي الأخضر — شركة تصنيع منظف للعلامات الخاصة | Amy Skin OEM
 High Moisturizing Cream — Private Label Face Cream Manufacturer | Amy Skin OEM	كريم الترطيب العالي — شركة تصنيع كريم الوجه للعلامات الخاصة | Amy Skin OEM
-Houttuynia Cleansing Spray — Private Label Cleansing Spray Manufacturer | Amy Skin OEM	طهارة طهارة طهارة - مُصنِّع مُصنِّع مطبوعات خاص للاسم المُطَهِّر للتنظيف
+Houttuynia Cleansing Spray — Private Label Cleansing Spray Manufacturer | Amy Skin OEM	بخاخ التنظيف بالهوتنيا — شركة تصنيع بخاخ تنظيف للعلامات الخاصة | Amy Skin OEM
 Hyaluronic Acid Serum — Private Label Serum Manufacturer | Amy Skin OEM	سيروم حمض الهيالورونيك — شركة تصنيع سيروم للعلامات الخاصة | Amy Skin OEM
-Hydrating Toner — Private Label Toner Manufacturer | Amy Skin OEM	Toner: شركة خاصة للحرف المصنف للاسم Amy Skin OEM
+Hydrating Toner — Private Label Toner Manufacturer | Amy Skin OEM	تونر مرطب — شركة تصنيع تونر للعلامات الخاصة | Amy Skin OEM
 Hydrogel V Face Patch — Private Label Face Mask Manufacturer | Amy Skin OEM	رقعة الوجه الهيدروجيل V — شركة تصنيع قناع الوجه للعلامات الخاصة | Amy Skin OEM
-Leucocyte Firming Face Mask — Private Label Face Mask Manufacturer | Amy Skin OEM	قناع وجه وجه الوجه الماعز (Luuucocyytyte) اللقب الخاص: وجه الوجه اللقب الخاص
+Leucocyte Firming Face Mask — Private Label Face Mask Manufacturer | Amy Skin OEM	قناع الوجه المشدود بمستخلص كريات الدم البيضاء — شركة تصنيع قناع وجه للعلامات الخاصة | Amy Skin OEM
 Moisturising Cream — Private Label Cream Manufacturer | Amy Skin OEM	كريم مرطب — شركة تصنيع كريم للعلامات الخاصة | Amy Skin OEM
 Peptide Serum — Private Label Anti-Aging Serum Manufacturer | Amy Skin OEM	سيروم الببتيد — شركة تصنيع سيروم مكافحة الشيخوخة للعلامات الخاصة | Amy Skin OEM
 Pink Collagen Crystal Lip Masks — Private Label Lip Mask Manufacturer | Amy Skin OEM	أقنعة شفاه وردية بكولاجين كريستالي — شركة تصنيع قناع الشفاه للعلامات الخاصة | Amy Skin OEM
@@ -1001,8 +998,8 @@ Purifying Facial Cleanser — Private Label Facial Cleanser Manufacturer | Amy S
 Retinol Eye Cream Stick — Private Label Eye Cream Manufacturer | Amy Skin OEM	قلم كريم عين الريتينول — شركة تصنيع كريم العين للعلامات الخاصة | Amy Skin OEM
 Retinol Under Eye Serum — Private Label Under Eye Serum Manufacturer | Amy Skin OEM	سيروم الريتينول تحت العين — شركة تصنيع سيروم تحت العين للعلامات الخاصة | Amy Skin OEM
 Self Tanning Oil — Private Label Body Care Manufacturer | Amy Skin OEM	زيت التسمير الذاتي — شركة تصنيع العناية بالجسم للعلامات الخاصة | Amy Skin OEM
-Shampoo — Private Label Shampoo Manufacturer | Amy Skin OEM	مؤسسة خاصة (Amy Skin OEM)
-Sheet Mask — Private Label Sheet Mask Manufacturer | Amy Skin OEM	سِلْس ورقيّة - خ مخصّص تصنّع سِلْف ورق ورق ورق ورقيّة
+Shampoo — Private Label Shampoo Manufacturer | Amy Skin OEM	شامبو — شركة تصنيع شامبو للعلامات الخاصة | Amy Skin OEM
+Sheet Mask — Private Label Sheet Mask Manufacturer | Amy Skin OEM	قناع ورقي — شركة تصنيع قناع ورقي للعلامات الخاصة | Amy Skin OEM
 Sunscreen SPF50 — Private Label Sunscreen Manufacturer | Amy Skin OEM	واقي شمس SPF50 — شركة تصنيع واقي الشمس للعلامات الخاصة | Amy Skin OEM
 Vitamin C Serum — Private Label Serum Manufacturer | Amy Skin OEM	سيروم فيتامين C — شركة تصنيع سيروم للعلامات الخاصة | Amy Skin OEM
 What is a private label 24K gold eye mask? An under-eye collagen patch built around a 24K gold hydrogel, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	ما هو قناع العين الذهبي 24K للعلامة الخاصة؟ رقعة كولاجين تحت العين مبنية على هيدروجل الذهب 24K، جاهزة لعلامتك التجارية في MOQ 500–1,000 وحدة. ابدأ من هذه التركيبة الجاهزة أو خصّصها — العينة أولاً، ثم الإنتاج بالجملة.
@@ -1377,11 +1374,11 @@ SPF claims and the testing your market needs are confirmed per market before pro
 What is the minimum order quantity?	ما هي الحد الأدنى للكمية المطلوبة؟
 Yes. Level, texture and fragrance direction can be adjusted with the factory team, and the pack format is confirmed per order — see	نعم ، يمكن تعديل اتجاه المستوى ، النسيج ، واتجاه العطر مع فريق المصنع ، وترتيب الحزمة مؤكد حسب الطلب ، انظر
 Yes. Level, texture and fragrance direction can be adjusted with the factory team, and the pack format is confirmed per order. The price is quoted per order.	نعم، يمكن تعديل اتجاه المستوى والنسيج والعطر مع فريق المصنع، ويتم تأكيد شكل الحزمة حسب الطلب، ويُنقل السعر لكل طلب.
-Customize	هذا
-Customize This Formula	& هذا
+Customize	تخصيص
+Customize This Formula	تخصيص هذه التركيبة
 Get a Quote for This Formula	احصل على اقتباس لهذه التركيبة
 See all formulas →	انظر جميع التركيبات
-View formula	لِ
+View formula	عرض التركيبة
 24K Gold Eye Mask Under Eye Collagen Patch — Amy Skin private label	24 ألف قناع عين ذهبي ذهبي تحت رقعة كولاجين - بطاقة آيمي جلد خاصة
 Amino Acid Cleanser — Amy Skin private label	منظف الأحماض الأمينية — علامة Amy Skin الخاصة
 Anti-Aging Cream — Amy Skin private label	كريم مضاد للشيخوخة — علامة Amy Skin الخاصة
@@ -1394,7 +1391,7 @@ CICA Oil-to-Mask Treatment — Amy Skin private label	CICCA المعاملة م�
 Cocoa Butter Sugar Scrub Strawberry — Amy Skin private label	مقشر الجسم بزبدة الكاكاو والسكر بالفراولة — علامة Amy Skin الخاصة
 Color Changing Lip Oil — Amy Skin private label	زيت شفاه متغير اللون — علامة Amy Skin الخاصة
 High Moisturizing Cream — Amy Skin private label	كريم ترطيب عالٍ — علامة Amy Skin الخاصة
-Houttuynia Cleansing Spray — Amy Skin private label	طلاءات هوتوانيا تنظف طلاءات العلام الخاص من Amy Skin
+Houttuynia Cleansing Spray — Amy Skin private label	بخاخ التنظيف بالهوتنيا — علامة Amy Skin الخاصة
 Hyaluronic Acid Serum — Amy Skin private label	سيروم حمض الهيالورونيك — علامة Amy Skin الخاصة
 Hydrating Toner — Amy Skin private label	تونر مرطب — علامة Amy Skin الخاصة
 Moisturising Cream — Amy Skin private label	كريم مرطب — علامة Amy Skin الخاصة
@@ -1405,43 +1402,43 @@ Retinol Eye Cream Stick — Amy Skin private label	قلم كريم عين الر
 Retinol Under Eye Serum — Amy Skin private label	سيروم الريتينول تحت العين — علامة Amy Skin الخاصة
 Self Tanning Oil — Amy Skin private label	زيت التسمير الذاتي — علامة Amy Skin الخاصة
 Shampoo — Amy Skin private label	شامبو — علامة Amy Skin الخاصة
-Sheet Mask — Amy Skin private label	سِلْسِسِكِ - Amy Skin ورقة بطاقة تجارية خاصة
+Sheet Mask — Amy Skin private label	قناع ورقي — علامة Amy Skin الخاصة
 Sunscreen SPF50 — Amy Skin private label	واقي شمس SPF50 — علامة Amy Skin الخاصة
 Vitamin C Serum — Amy Skin private label	سيروم فيتامين C — علامة Amy Skin الخاصة
 / Body & Hair Care / Body Lotion	العناية بالجسم والشعر/الجسم
 / Body & Hair Care / Cocoa Butter Sugar Scrub Strawberry	العناية بالجسم والشعر/التركة
-/ Body & Hair Care / Self Tanning Oil	العناية بالجسد والشعر/النفس/الوزن الذاتي
-/ Body & Hair Care / Shampoo	العناية الجسمية والشعرية/ الشامبو
+/ Body & Hair Care / Self Tanning Oil	/ العناية بالجسم والشعر / زيت التسمير الذاتي
+/ Body & Hair Care / Shampoo	/ العناية بالجسم والشعر / شامبو
 / Cleanser & Toner / Amino Acid Cleanser	المنظفات/ الطوابق/ الأمينة المنظفات الحمضية
 / Cleanser & Toner / Banana Facial Cleanser	منظفات/ طهارة/ مراقص/ منظفات
 / Cleanser & Toner / Green Tea Facial Cleanser	منظفات وملصقات/ منظفات للشاي الأخضر
-/ Cleanser & Toner / Hydrating Toner	منظف & مرن مُطْرَد
-/ Cleanser & Toner / Purifying Facial Cleanser	منظفات ومغررات ومطهرات الوجه المطهرات
-/ Cleanser / Houttuynia Cleansing Spray	طهارة/ طهارة/ طهارة/ طهارة
+/ Cleanser & Toner / Hydrating Toner	/ المنظف والتونر / تونر مرطب
+/ Cleanser & Toner / Purifying Facial Cleanser	/ المنظف والتونر / منظف الوجه المنقي
+/ Cleanser / Houttuynia Cleansing Spray	/ المنظف / بخاخ التنظيف بالهوتنيا
 / Creams / Anti-Aging Cream	الكريمات/ معاد تهشيج الكريم
 / Creams / Bosein Sea Buckthorn Polypeptide Anti-Wrinkle Cream	كريم معادي للمنازل
 / Creams / High Moisturizing Cream	كريمات/ كريمات/ كريم عالي النزوة
-/ Creams / Moisturising Cream	كريمات / مراوح
-/ Creams / Retinol Eye Cream Stick	(أ) وضعة الـ / قُرْنَم/ عَيْنِيْنِ
+/ Creams / Moisturising Cream	/ الكريمات / كريم مرطب
+/ Creams / Retinol Eye Cream Stick	/ الكريمات / قلم كريم عين الريتينول
 / Lip Care / Color Changing Lip Oil	/ عناية شفقة/ لون مُحْكِر
-/ Lip Care / Pink Collagen Crystal Lip Masks	/ / عناية الشفة / بكالوريب بينك كولاجين
+/ Lip Care / Pink Collagen Crystal Lip Masks	/ العناية بالشفاه / أقنعة شفاه وردية بكولاجين كريستالي
 / Serums / 24K Gold Hyaluronic Acid Serum	/ سُنْع / سُنْع / 24 كْلَف
 / Serums / Barrier Repairing Essence	/ المُصَرَقات / عوائق إصلاح التَثَلْرَجَ
 / Serums / Blushwood Berry Seed Extract Facial Essence	/ المُصَرَفَات / بِلْسُوود Blswoowood Berry
 / Serums / Carrot Face Serum	/ المُقَرَّر
-/ Serums / Hyaluronic Acid Serum	(أ) أُسس/مُعَدَّل
-/ Serums / Niacinamide Serum	/ سيروم / سيروم النياسيناميد
-/ Serums / Peptide Serum	المُقَرَّرات/ المُعَرَفَة/
-/ Serums / Retinol Under Eye Serum	(أ) عدد الأشخاص الذين يعيشون تحت جناح العين (أ)
-/ Serums / Vitamin C Serum	/ المُقَرْرَس/ فيتامين
+/ Serums / Hyaluronic Acid Serum	/ السيروم / سيروم حمض الهيالورونيك
+/ Serums / Niacinamide Serum	/ السيروم / سيروم النياسيناميد
+/ Serums / Peptide Serum	/ السيروم / سيروم الببتيد
+/ Serums / Retinol Under Eye Serum	/ السيروم / سيروم الريتينول تحت العين
+/ Serums / Vitamin C Serum	/ السيروم / سيروم فيتامين C
 / Sheet Mask / 24K Gold Eye Mask Under Eye Collagen Patch	/ / ورقة قناع / 24K ذهبية العين قناع تحت العين كولاجين Patch
 / Sheet Mask / Chamomile Facial Mask	/ // غطاء الورقة// قناع واجهة
 / Sheet Mask / CICA Oil-to-Mask Treatment	// قناع ورقي/ معاملة CICA من الانتقال من مرحلة إلى أخرى
-/ Sheet Mask / Hydrogel V Face Patch	// ورقة ماسك/ Hedgel V وجه
-/ Sheet Mask / Leucocyte Firming Face Mask	قناع/غطاء/ قناع/ قناع الوجه الواقي
-/ Sheet Mask / Sheet Mask	قناع ورقي / قناع ورقي
+/ Sheet Mask / Hydrogel V Face Patch	/ قناع ورقي / رقعة الوجه الهيدروجيل V
+/ Sheet Mask / Leucocyte Firming Face Mask	/ قناع ورقي / قناع وجه مشدود بمستخلص كريات الدم البيضاء
+/ Sheet Mask / Sheet Mask	/ قناع ورقي / قناع ورقي
 / Skin Care Sets / Centella Amino Acid Skin Care Set	مجموعات العناية بالجلد/ Cenellا أمينو Asino Acid Skin set
-/ Sun Care / Sunscreen SPF50	/ عناية بالسن / / uncre/ uns SPP50
+/ Sun Care / Sunscreen SPF50	/ العناية من الشمس / واقي شمس SPF50
 10-ampoule card – confirm per order	بطاقة 10 أمبولات – تُؤكَّد لكل طلب
 100% bio-collagen, hydration & plumping	100٪ من الكولاكينات البيولوجية، والإمتزاز، والإسراف
 10:1 blushwood berry seed extract, intensive hydration	مستخلص بذور توت بلاشوود 10:1، ترطيب مكثف

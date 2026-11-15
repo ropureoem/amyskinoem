@@ -9,7 +9,8 @@ Usage: python3 scripts/build_ja.py [--update] [--formulas-only]
   (exact match first, then longest-first phrase replacement inside a string).
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
 - Links to formulas/ point at the ja formulas/ for batch-1 pages
-  (FORMULA_BATCH1); other formula pages still link to English.
+  (FORMULA_BATCH1 + FORMULA_BATCH2); other formula pages still
+  link to English.
 - Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th) and the
   .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA/DE/TH, aria-label "言語を選択").
   <html> gets lang="ja" (LTR: no dir attribute).
@@ -62,7 +63,28 @@ FORMULA_BATCH1 = [
     "high-moisturizing-cream.html",
 ]
 
-FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
+FORMULA_BATCH2 = [
+    "houttuynia-cleansing-spray.html",
+    "hyaluronic-acid-serum.html",
+    "hydrating-toner.html",
+    "hydrogel-v-face-patch.html",
+    "leucocyte-firming-face-mask.html",
+    "moisturising-cream.html",
+    "peptide-serum.html",
+    "pink-collagen-crystal-lip-mask.html",
+    "niacinamide-serum.html",
+    "purifying-facial-cleanser.html",
+    "retinol-eye-cream-stick.html",
+    "retinol-under-eye-serum.html",
+    "self-tanning-oil.html",
+    "shampoo.html",
+    "sheet-mask.html",
+    "sunscreen-spf50.html",
+    "vitamin-c-serum.html",
+]
+
+FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1 + FORMULA_BATCH2]
+FORMULA_BATCH2_PAGES = ["formulas/" + s for s in FORMULA_BATCH2]
 
 
 VOID = {"meta", "link", "img", "br", "hr", "input", "area", "base", "col",
@@ -542,14 +564,14 @@ def update_prev_langs(rel):
 def main():
     update = "--update" in sys.argv or "--update-en-zh" in sys.argv
     formulas_only = "--formulas-only" in sys.argv
-    pages = FORMULA_PAGES if formulas_only else JA_PAGES
+    pages = FORMULA_BATCH2_PAGES if formulas_only else JA_PAGES
     for rel in pages:
         dest = build_ja_page(rel)
         print("built", dest)
     if update:
         for rel in pages:
             update_prev_langs(rel)
-    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ja-formula1.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ja.json"))
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ja-formula2.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ja.json"))
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="

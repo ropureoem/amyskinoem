@@ -1,6 +1,3 @@
-# Amy Skin ru.tsv — Russian glossary (EN<TAB>RU). Text nodes matched after whitespace normalisation.
-# Rules: numbers, units, model/cert names, brand names (Amy Skin), MOQ/OEM/ODM/SPF50 stay verbatim.
-# Full-sentence entries first; the builder also applies phrase entries inside longer strings (longest-first).
 OEM Skincare Manufacturer. Built for Your Brand. | Amy Skin OEM	OEM-производитель средств по уходу за кожей. Создано для вашего бренда. | Amy Skin OEM
 Guangzhou, China	Гуанчжоу, Китай
 OEM / ODM since 2006	OEM/ODM с 2006 года
@@ -993,15 +990,15 @@ Hyaluronic Acid Serum — Private Label Serum Manufacturer | Amy Skin OEM	Сыв
 Hydrating Toner — Private Label Toner Manufacturer | Amy Skin OEM	Увлажняющий тонер — производитель private label тонеров | Amy Skin OEM
 Hydrogel V Face Patch — Private Label Face Mask Manufacturer | Amy Skin OEM	Гидрогелевый V-патч для лица — производитель private label масок для лица | Amy Skin OEM
 Leucocyte Firming Face Mask — Private Label Face Mask Manufacturer | Amy Skin OEM	Укрепляющая маска для лица с экстрактом лейкоцитов — производитель private label масок для лица | Amy Skin OEM
-Moisturising Cream — Private Label Cream Manufacturer | Amy Skin OEM	Увлажняющий крем — производитель private label Cream | Amy Skin OEM
-Peptide Serum — Private Label Anti-Aging Serum Manufacturer | Amy Skin OEM	Пептидная сыворотка — производитель private label Anti-Aging Serum | Amy Skin OEM
+Moisturising Cream — Private Label Cream Manufacturer | Amy Skin OEM	Увлажняющий крем — производитель private label кремов | Amy Skin OEM
+Peptide Serum — Private Label Anti-Aging Serum Manufacturer | Amy Skin OEM	Пептидная сыворотка — производитель private label сывороток | Amy Skin OEM
 Pink Collagen Crystal Lip Masks — Private Label Lip Mask Manufacturer | Amy Skin OEM	Розовые коллагеновые кристальные маски для губ — производитель private label масок для губ | Amy Skin OEM
 Private Label Niacinamide Serum — Custom Formula Manufacturer | Amy Skin OEM	Private label Ниацинамид сыворотка — настраиваемый производитель формулы | Amy Skin OEM
 Purifying Facial Cleanser — Private Label Facial Cleanser Manufacturer | Amy Skin OEM	Очищающее средство для лица — производитель private label очищающих средств для лица | Amy Skin OEM
 Retinol Eye Cream Stick — Private Label Eye Cream Manufacturer | Amy Skin OEM	Стик-крем для глаз с ретинолом — производитель private label кремов для глаз | Amy Skin OEM
 Retinol Under Eye Serum — Private Label Under Eye Serum Manufacturer | Amy Skin OEM	Сыворотка с ретинолом для кожи вокруг глаз — производитель private label сывороток для кожи вокруг глаз | Amy Skin OEM
 Self Tanning Oil — Private Label Body Care Manufacturer | Amy Skin OEM	Масло для автозагара — производитель private label средств по уходу за телом | Amy Skin OEM
-Shampoo — Private Label Shampoo Manufacturer | Amy Skin OEM	Шампунь — производитель private label Shampoo | Amy Skin OEM
+Shampoo — Private Label Shampoo Manufacturer | Amy Skin OEM	Шампунь — производитель private label шампуней | Amy Skin OEM
 Sheet Mask — Private Label Sheet Mask Manufacturer | Amy Skin OEM	Тканевая маска — производитель private label тканевых масок | Amy Skin OEM
 Sunscreen SPF50 — Private Label Sunscreen Manufacturer | Amy Skin OEM	Солнцезащитное средство SPF50 — производитель private label солнцезащитных средств | Amy Skin OEM
 Vitamin C Serum — Private Label Serum Manufacturer | Amy Skin OEM	Сыворотка с витамином С — производитель private label сывороток | Amy Skin OEM
@@ -1022,7 +1019,7 @@ What is a private label collagen crystal lip mask? A lip mask built around 100% 
 What is a private label color changing lip oil? A pH-reactive lip oil in 5 fruit shades, ready for your brand at MOQ 500–1,000 units. Sample first, then bulk.	Что такое Масло для губ, меняющее цвет private label? PH-реактивное масло для губ в 5 фруктовых оттенках, готовое для вашего бренда в MOQ 500-1,000 единиц. Сначала проба, потом оптом.
 What is a private label green tea facial cleanser? A 150 g oil-control foam wash with green tea catechins, ready for your brand at MOQ 500–1,000 units. Sample first, then bulk.	Что такое green tea facial cleanser private label? 150 г пенопласта для контроля масла с катехинами зеленого чая, готовые для вашего бренда по цене 500-1,000 MOQ. Сначала проба, потом оптом.
 What is a private label high moisturizing cream? A face cream built around sodium hyaluronate, ceramide NP and squalane, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Крем с высоким увлажнением private label? Крем для лица, построенный вокруг гиалуроната натрия, церамида NP и сквалана, готов для вашего бренда на MOQ 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
-What is a private label houttuynia cleansing spray? A rinse-free cleansing spray built around 89% heartleaf extract, hydrolyzed collagen and sodium hyaluronate, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое houttuynia cleansing spray private label? Спрей для очищения без полоскания, построенный на 89% экстракте сердечного листа, гидролизованном коллагене и гиалуронате натрия, готов для вашего бренда на 500-1,000 единиц MOQ. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
+What is a private label houttuynia cleansing spray? A rinse-free cleansing spray built around 89% heartleaf extract, hydrolyzed collagen and sodium hyaluronate, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое очищающий спрей с хауттюйнией private label? Спрей для очищения без полоскания, построенный на 89% экстракте сердечного листа, гидролизованном коллагене и гиалуронате натрия, готов для вашего бренда на 500-1,000 единиц MOQ. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 What is a private label Hyaluronic Acid serum? A hydrating serum built on hyaluronic acid, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Сыворотка с гиалуроновой кислотой private label? Увлажняющая сыворотка, построенная на гиалуроновой кислоте, готова для вашего бренда по цене 500-1,000 MOQ. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 What is a private label Hydrating Toner? A prep-and-hydrate toner for the first step after cleansing, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Увлажняющий тонер private label? Предварительный и гидратный тонер для первого шага после очистки, готовый для вашего бренда в 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 What is a private label hydrogel V face patch? A boxed five-pair ear-hanging lift patch, ready for your brand at MOQ 500–1,000 units. Sample first, then bulk.	Что такое Гидрогелевый V-патч для лица private label? Упакованный пятипарный подъемник, готовый для вашего бренда в MOQ 500-1,000 единиц. Сначала проба, потом оптом.
@@ -1038,7 +1035,7 @@ What is a private label self tanning oil? A streak-free bronze tanning oil in 50
 What is a private label Shampoo? A hair-care shampoo, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Шампунь private label? Шампунь для ухода за волосами, готовый для вашего бренда в 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 What is a private label Sheet Mask? A single-use hydrating mask in a sealed pouch, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Тканевая маска private label? Одноразовая увлажняющая маска в герметичном мешочке, готовая для вашего бренда по цене 500-1,000 MOQ. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 What is a private label Sunscreen SPF50? A sun-protection product for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk. SPF claims and testing are confirmed per market.	Что такое Солнцезащитное средство SPF50 private label? Продукт для защиты от солнца для вашего бренда в MOQ 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство. Заявления и испытания SPF подтверждаются на рынке.
-What is a private label Vitamin C serum? A brightening serum in 10% or 15% Vitamin C, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое Vitamin C serum private label? Осветляющая сыворотка в 10% или 15% витамина С, готовая для вашего бренда в MOQ 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
+What is a private label Vitamin C serum? A brightening serum in 10% or 15% Vitamin C, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	Что такое сыворотка с витамином С private label? Осветляющая сыворотка в 10% или 15% витамина С, готовая для вашего бренда в MOQ 500-1,000 единиц. Начните с этой готовой формулы или настройте ее — сначала образец, затем массовое производство.
 Can this formula be customised?	Можно ли настроить эту формулу?
 How brands use it	Как бренды используют его
 Related formulas	Связанные формулы
@@ -1059,7 +1056,7 @@ What is a private label cocoa butter sugar scrub strawberry?	Что такое �
 What is a private label color changing lip oil?	Что такое Масло для губ, меняющее цвет private label?
 What is a private label green tea facial cleanser?	Что такое green tea facial cleanser private label?
 What is a private label high moisturizing cream?	Что такое Крем с высоким увлажнением private label?
-What is a private label houttuynia cleansing spray?	Что такое houttuynia cleansing spray private label?
+What is a private label houttuynia cleansing spray?	Что такое очищающий спрей с хауттюйнией private label?
 What is a private label Hyaluronic Acid serum?	Что такое Сыворотка с гиалуроновой кислотой private label?
 What is a private label Hydrating Toner?	Что такое Увлажняющий тонер private label?
 What is a private label hydrogel V face patch?	Что такое Гидрогелевый V-патч для лица private label?
@@ -1075,7 +1072,7 @@ What is a private label self tanning oil?	Что такое масло для а
 What is a private label Shampoo?	Что такое Шампунь private label?
 What is a private label Sheet Mask?	Что такое Тканевая маска private label?
 What is a private label Sunscreen SPF50?	Что такое Солнцезащитное средство SPF50 private label?
-What is a private label Vitamin C serum?	Что такое Vitamin C serum private label?
+What is a private label Vitamin C serum?	Что такое сыворотка с витамином С private label?
 What to send with your enquiry	Что отправить с вашим запросом
 What we handle for your brand	Что мы делаем для вашего бренда
 Why brands choose this formula	Почему бренды выбирают эту формулу
@@ -1410,38 +1407,38 @@ Sunscreen SPF50 — Amy Skin private label	Солнцезащитное сред
 Vitamin C Serum — Amy Skin private label	Сыворотка с витамином С — private label Amy Skin
 / Body & Hair Care / Body Lotion	/ Забота о волосах / Лосьон для тела
 / Body & Hair Care / Cocoa Butter Sugar Scrub Strawberry	/ Тело и уход за волосами / Какао-масло сахарный кустарник клубника
-/ Body & Hair Care / Self Tanning Oil	/ Уход за телом и волосами / Самозагар
-/ Body & Hair Care / Shampoo	Забота о теле и волосах / Шампунь
+/ Body & Hair Care / Self Tanning Oil	/ Уход за телом и волосами / Масло для автозагара
+/ Body & Hair Care / Shampoo	/ Уход за телом и волосами / Шампунь
 / Cleanser & Toner / Amino Acid Cleanser	/ Очиститель и тонер / Очиститель аминокислот
 / Cleanser & Toner / Banana Facial Cleanser	/ Чистильщик и тонер / Банановый очиститель лица
 / Cleanser & Toner / Green Tea Facial Cleanser	/ Чистильщик и тонер / Лицевой очиститель зеленого чая
-/ Cleanser & Toner / Hydrating Toner	/ Очиститель и тонер / Увлажняющий тонер
-/ Cleanser & Toner / Purifying Facial Cleanser	/ Очиститель и тонер / Очиститель для лица
-/ Cleanser / Houttuynia Cleansing Spray	/ Очиститель / Очистительный спрей Houttuynia
+/ Cleanser & Toner / Hydrating Toner	/ Очищение и тонер / Увлажняющий тонер
+/ Cleanser & Toner / Purifying Facial Cleanser	/ Очищение и тонер / Очищающее средство для лица
+/ Cleanser / Houttuynia Cleansing Spray	/ Очищение / Очищающий спрей с хауттюйнией
 / Creams / Anti-Aging Cream	/ Кремы / Антивозрастной крем
 / Creams / Bosein Sea Buckthorn Polypeptide Anti-Wrinkle Cream	/ Кремы / Полипептид борода Bosein Sea Buckthorn Антиморщинный крем
 / Creams / High Moisturizing Cream	/ Кремы / Высоко увлажняющий крем
 / Creams / Moisturising Cream	/ Кремы / Увлажняющий крем
-/ Creams / Retinol Eye Cream Stick	Retinol Eye Cream Stick / Крем для глаз
+/ Creams / Retinol Eye Cream Stick	/ Кремы / Стик-крем для глаз с ретинолом
 / Lip Care / Color Changing Lip Oil	/ Уход за губами / Изменение цвета масла губ
-/ Lip Care / Pink Collagen Crystal Lip Masks	Лип-карьера / Розовый коллаген Crystal Lip Masks
+/ Lip Care / Pink Collagen Crystal Lip Masks	/ Уход за губами / Розовые коллагеновые кристальные маски для губ
 / Serums / 24K Gold Hyaluronic Acid Serum	/ Сыворотки / 24K Золотая гиалуроновая кислотная сыворотка
 / Serums / Barrier Repairing Essence	/ Сыворотки / Ремонт барьеров
 / Serums / Blushwood Berry Seed Extract Facial Essence	/ Сыворотки / Blushwood Berry Seed Extract Лицевая эссенция
 / Serums / Carrot Face Serum	/ Сыворотка / Сыворотка морковного лица
-/ Serums / Hyaluronic Acid Serum	/ Сыворотки / Сыворотка гиалуроновой кислоты
-/ Serums / Niacinamide Serum	/ Сыворотки / Ниацинамид сыворотка
+/ Serums / Hyaluronic Acid Serum	/ Сыворотки / Сыворотка с гиалуроновой кислотой
+/ Serums / Niacinamide Serum	/ Сыворотки / Сыворотка с ниацинамидом
 / Serums / Peptide Serum	/ Сыворотки / Пептидная сыворотка
-/ Serums / Retinol Under Eye Serum	/ Сыворотки / Ретинол под сывороткой глаза
-/ Serums / Vitamin C Serum	/ Сыворотки / Витамин С сыворотка
+/ Serums / Retinol Under Eye Serum	/ Сыворотки / Сыворотка с ретинолом для кожи вокруг глаз
+/ Serums / Vitamin C Serum	/ Сыворотки / Сыворотка с витамином С
 / Sheet Mask / 24K Gold Eye Mask Under Eye Collagen Patch	/ Тканевая маска / Коллагеновый патч для глаз с золотом 24K
 / Sheet Mask / Chamomile Facial Mask	/ Лицевая маска / Лицевая маска ромашки
 / Sheet Mask / CICA Oil-to-Mask Treatment	/ Специализированная маска / CICA Oil-to-Mask
-/ Sheet Mask / Hydrogel V Face Patch	/ Лицевая маска / Hydrogel V Face Patch
-/ Sheet Mask / Leucocyte Firming Face Mask	Лицевая маска / Leucocyte Firming Face Mask
-/ Sheet Mask / Sheet Mask	/ Лицевая маска / Sheet Mask
+/ Sheet Mask / Hydrogel V Face Patch	/ Тканевые маски / Гидрогелевый V-патч для лица
+/ Sheet Mask / Leucocyte Firming Face Mask	/ Тканевые маски / Укрепляющая маска для лица с экстрактом лейкоцитов
+/ Sheet Mask / Sheet Mask	/ Тканевые маски / Тканевая маска
 / Skin Care Sets / Centella Amino Acid Skin Care Set	Наборы ухода за кожей / Набор для ухода за кожей с центеллой и аминокислотами
-/ Sun Care / Sunscreen SPF50	Sun Care / Солнцезащитный крем SPF50
+/ Sun Care / Sunscreen SPF50	/ Защита от солнца / Солнцезащитное средство SPF50
 10-ampoule card – confirm per order	10-ампульная карта – подтверждение по заказу
 100% bio-collagen, hydration & plumping	100% биоколлаген, гидратация и сантехника
 10:1 blushwood berry seed extract, intensive hydration	10:1 экстракт семян ягод красной древесины, интенсивная гидратация

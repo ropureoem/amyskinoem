@@ -1,6 +1,3 @@
-# Amy Skin th.tsv — Thai glossary (EN<TAB>TH). Text nodes matched after whitespace normalisation.
-# Rules: numbers, units, model/cert names, brand names (Amy Skin), MOQ/OEM/ODM/SPF50 stay verbatim.
-# Full-sentence entries first; the builder also applies phrase entries inside longer strings (longest-first).
 OEM Skincare Manufacturer. Built for Your Brand. | Amy Skin OEM	ผู้ผลิตสกินแคร์ OEM สร้างมาเพื่อแบรนด์ของคุณ | Amy Skin OEM
 Guangzhou, China	Guangzhou, China
 OEM / ODM since 2006	OEM / ODM ตั้งแต่ปี 2006
@@ -143,17 +140,17 @@ Start from a ready formula	เริ่มต้นจากสูตรที�
 34 featured formulas from a library of 10,000+. Pick a formula, customise it with the factory team, approve a sample — then bulk production at	34 เป็นสูตรที่มาจากห้องสมุดจํานวน 10,000 + เลือก สูตร ซึ่ง ทํา กับ ทีม โรง งาน เพื่อ ปรับ ปรุง ให้ ดี ขึ้น แล้ว ก็ ปรับ ปรุง ให้ ดี ขึ้น
 Serum	เซรั่ม
 Vitamin C Serum	เซรั่มวิตามินซี
-Hyaluronic Acid Serum	แอ โร บิก แอ โร บิก
-Niacinamide Serum	นิคามิไนด์ เซรั่ม
+Hyaluronic Acid Serum	เซรั่มไฮยาลูโรนิก
+Niacinamide Serum	เซรั่มไนอะซินาไมด์
 Cream	ครีม
-Moisturising Cream	การกระตุ้นครีม
+Moisturising Cream	ครีมมอยส์เจอไรเซอร์
 Cleanser	เครื่องมือทําความสะอาด
 Green Tea Facial Cleanser	เครื่องมือทําความสะอาดหน้าชาสีเขียว
 150 g foam wash for oily and combination skin	150 กรัม ล้างผิวแบบผสม
 Mask	มาสก์
-Hydrogel V Face Patch	Hydrogel V Face Patch
+Hydrogel V Face Patch	แผ่นมาสก์หน้าไฮโดรเจลรูปตัว V
 Boxed five-pair set for the jaw and chin	กล่องห้าเก้าอี้ตั้งค่าสําหรับขากรรไกรและคาง
-Leucocyte Firming Face Mask	หน้ากาก ที่ แข็ง แรง
+Leucocyte Firming Face Mask	มาสก์หน้ากระชับลิวโคไซต์
 25 g essence sheet mask, firming	25 สีพื้นกระดาษหลัก, การ บริษัท
 Skin Care Set	ชุดดูแลผิว
 Centella Amino Acid Skin Care Set	เซ็ตสกินแคร์ Centella Amino Acid
@@ -165,7 +162,7 @@ Essence with Ceramide NP and black currant seed oil	เอสเซนส์ท�
 Bosein Sea Buckthorn Polypeptide Anti-Wrinkle Cream	โพลีเปปไทด์ แอนตี้วินเทิลครีม
 Face cream with Pro-Xylane and sea buckthorn seed oil	ครีมทาหน้าที่มี Pro-Xylane และน้ำมันเมล็ดซีบัคธอร์น
 Lip Care	การ ดู แล ริม ฝีปาก
-Pink Collagen Crystal Lip Masks	หน้ากาก คริสตัล สี ชมพู
+Pink Collagen Crystal Lip Masks	มาสก์ปากคริสตัลคอลลาเจนสีชมพู
 Lip mask with bio-collagen and sodium hyaluronate	มาสก์ริมฝีปากที่มีไบโอคอลลาเจนและโซเดียมไฮยาลูโรเนต
 View all 34 featured formulas →	ดูสูตรที่มีองค์ประกอบ 34 ชุด →
 HOW WE WORK	วิธีการทำงานของเรา
@@ -371,19 +368,19 @@ The brand on every pack	แบรนด์ในทุกแพ็ค
 Product renders — your brand name printed on the pack, straight, complete, never cropped. Stacked variant on tubes and mask pouches, primary lockup everywhere else. The 12 renders below are examples — 34 featured formulas from a library of 10,000+.	โปรดักต์ แปล — ชื่อ ยี่ห้อ ของ คุณ ที่ พิมพ์ บน แพ็ค, พิมพ์ ตรง, ครบ ชุด, ไม่ เคย ปลูก. มีรอยขีดข่วนบนท่อและถุงหนัง ล็อกหลักทุกที่ ภาพ ประกอบ ที่ พิมพ์ ข้าง ล่าง นี้ มี 12 ภาพ คือ สูตร ที่ มี 34 ชิ้น จาก ห้อง สมุด จํานวน 10,000 +.
 See all 34 featured formulas →	ดูสูตรที่พิมพ์ได้ 34 ชุด →
 Serum dropper bottle · real product photo	ขวดเซรั่มแบบหยด · ภาพถ่ายสินค้าจริง
-Peptide Serum	เซรั่ม
+Peptide Serum	เซรั่มเปปไทด์
 Cream jar · real product photo	ครีมโหล ภาพถ่ายสินค้าจริง
 Anti-Aging Cream	ครีมบํารุง
 Amino Acid Cleanser	เครื่องทําความสะอาดอามิโน
 Tube · stacked logo · real product photo	ภาพถ่ายผลิตภัณฑ์จริง
-Hydrating Toner	ไฮเดรตโทเนอร์
+Hydrating Toner	โทนเนอร์ให้ความชุ่มชื้น
 Bottle · real product photo	ภาพถ่ายผลิตภัณฑ์จริงของขวด
-Sheet Mask	แปรงทาสี
+Sheet Mask	ชีทมาสก์
 Pouch · stacked logo · real product photo	Pouch ' วางโลโก้
 Body Lotion	โลทาน
 Pump bottle · real product photo	ขวดปั๊ม · ภาพถ่ายสินค้าจริง
 Shampoo	แชมพู
-Sunscreen SPF50	ดวงอาทิตย์ SPF50
+Sunscreen SPF50	ครีมกันแดด SPF50
 Label rule:	กฎแถบกํากับ:
 the brand name is the only brand mark on the pack. Product name, format and size go below it in small letterspaced capitals (secondary #B8B0A4 on dark ground). No other brand, no Chinese text on packaging.	ชื่อแบรนด์เป็นยี่ห้อเดียวในฝูง Product name, รูปแบบและขนาดจะอยู่ใต้มันในเมืองหลวงขนาดเล็ก (วินาทีที่ # B8B0A4 บนพื้นดินมืด). ไม่มีแบรนด์อื่น ๆ ไม่มีข้อความจีนบนแพ็คเกจ
 7 · Website colour scheme	7 เว็บไซต์
@@ -480,7 +477,7 @@ Blushwood Berry Seed Extract Facial Essence	เมล็ด Blushwood Berry ค�
 10:1 Blushwood Berry Seed Extract, Sodium Hyaluronate, Squalane	สารสกัดเมล็ด Blushwood Berry 10:1, โซเดียมไฮยาลูโรเนต, สควาเลน
 Botanical anti-aging	แอนติบอดี
 Essence 50 ml	เอสเซนส์ 50 มล.
-Retinol Under Eye Serum	เซรั่มใต้ตา Retinol
+Retinol Under Eye Serum	เซรั่มเรตินอลใต้ตา
 Retinol	Retinol
 Dark-circle & anti-wrinkle care	หน้ามืดและหน้าจั่ว
 Under-eye serum 30 ml	เซรั่มตาต่ํา 30 มิล
@@ -496,7 +493,7 @@ Cream 150 g	ครีม 150 กรัม
 Pro-Xylane, Sea Buckthorn, Peptide	Pro-Xylane, ซีบัคธอร์น, เปปไทด์
 Anti-wrinkle	ทวนเข็มนาฬิกา
 Cream 50 g	ครีม 50 กรัม
-Retinol Eye Cream Stick	ครีมตาเรโทล
+Retinol Eye Cream Stick	สติกครีมตาด้วยเรตินอล
 Encapsulated Retinol, Squalane	การ หด ตัว ของ สค วา เลน
 Firming eye care	การ ดู แล ตา อย่าง มั่นคง
 Eye cream stick 2.7 g	ครีมตาติด 2.7 กรัม
@@ -512,11 +509,11 @@ Banana Facial Cleanser	เครื่อง ซัก ผ้า หน้า �
 Banana Extract, Centella, Panthenol	คลายกล้วย, เซนเทลลา, พันเทนอล
 Purifying & oil control	การไล่ถ่ายและควบคุมน้ํามัน
 Cleanser 60 g	เครื่องมือทําความสะอาด 60 g
-Purifying Facial Cleanser	เครื่อง ซัก ล้าง หน้า
+Purifying Facial Cleanser	คลีนเซอร์ทำความสะอาดผิวหน้า
 Ginseng, Tiger Grass, Green Tea	กินเซิน, ไทเกอร์กราส, ชาเขียว
 Deep purification	ทําให้สะอาดสะอาด
 Cleanser 125 ml	คลีนเซอร์ 125 ml
-Houttuynia Cleansing Spray	สเปรย์ทำความสะอาด Houttuynia
+Houttuynia Cleansing Spray	สเปรย์ทำความสะอาดฮาวตูเนีย
 89% Heartleaf Extract, Hydrolyzed Collagen, Sodium Hyaluronate	สารสกัดฮาร์ทลีฟ 89%, คอลลาเจนไฮโดรไลซ์, โซเดียมไฮยาลูโรเนต
 Rinse-free cleansing	การล้างแบบไร้รอยหยัก
 Cleansing spray 100 ml	ล้าง สเปรย์ 100 มิลลิกรัม
@@ -548,7 +545,7 @@ Cocoa Butter Sugar Scrub Strawberry	ช็อกโกแลต
 Sugar Crystals, Shea Butter, Strawberry	คริสตัลน้ําตาล, เช บัตเตอร์, สตรอว์เบอร์รี่
 Gentle exfoliation	การ ร้อง ออก มา อย่าง อ่อน โยน
 Body scrub 250 ml	แปรงทาสี 250 มิลลิกรัม
-Self Tanning Oil	สี ทา นิน ของ ตัว เอง
+Self Tanning Oil	ออยล์แทนผิวด้วยตนเอง
 Tinted bronzing oil	น้ํามัน ระเหย
 Streak-free bronze	ทอง สัมฤทธิ์ ไร้ สติ (Streak)
 Tanning oil 50 g	น้ํามันทันนิ่ง 50 กรัม
@@ -996,14 +993,14 @@ Leucocyte Firming Face Mask — Private Label Face Mask Manufacturer | Amy Skin 
 Moisturising Cream — Private Label Cream Manufacturer | Amy Skin OEM	การ กระตุ้น ครีม — เครื่อง เคลือบ ครีม ครีม ส่วน ตัว
 Peptide Serum — Private Label Anti-Aging Serum Manufacturer | Amy Skin OEM	เป๊ป ไทด์ เซรั่ม — เครื่อง มือ ส่วน ตัว ที่ ต่อ ต้าน สัม พัทธยา มานู ฟ รู เกอร์ ○ Amy Skin OEM
 Pink Collagen Crystal Lip Masks — Private Label Lip Mask Manufacturer | Amy Skin OEM	หน้ากาก คริสตัล สี ชมพู — แบบ ส่วน ตัว ของ ลิป มาส มานู เฟอร์ ○ Amy Skin OEM
-Private Label Niacinamide Serum — Custom Formula Manufacturer | Amy Skin OEM	เครื่อง ช่วย จํา
+Private Label Niacinamide Serum — Custom Formula Manufacturer | Amy Skin OEM	เซรั่มไนอะซินาไมด์ — ผู้ผลิตสูตรเฉพาะ Private Label | Amy Skin OEM
 Purifying Facial Cleanser — Private Label Facial Cleanser Manufacturer | Amy Skin OEM	การ ล้าง หน้า — เครื่อง ล้าง หน้า แบบ ส่วน ตัว
 Retinol Eye Cream Stick — Private Label Eye Cream Manufacturer | Amy Skin OEM	ไม้ ตา เรทิ นอล ตา ครีม — แท่ง ตา ครีม ที่ เป็น ส่วน ตัว
-Retinol Under Eye Serum — Private Label Under Eye Serum Manufacturer | Amy Skin OEM	Retinol ภายใต้ตา Serum — Private Labelใต้ตา Serum Manacturer | Amy skin OEM
+Retinol Under Eye Serum — Private Label Under Eye Serum Manufacturer | Amy Skin OEM	เซรั่มเรตินอลใต้ตา — ผู้ผลิตเซรั่มใต้ตา Private Label | Amy Skin OEM
 Self Tanning Oil — Private Label Body Care Manufacturer | Amy Skin OEM	น้ํามัน ทา นิง — เครื่อง อุปโภค บริโภค ส่วน ตัว
 Shampoo — Private Label Shampoo Manufacturer | Amy Skin OEM	ชัมปู — เครื่อง มือ ส่วน ตัว
-Sheet Mask — Private Label Sheet Mask Manufacturer | Amy Skin OEM	มานู เอ อร์
-Sunscreen SPF50 — Private Label Sunscreen Manufacturer | Amy Skin OEM	Suncreen PPF50 — Private Label sunscreen Manacter | Amy skin OEMIM
+Sheet Mask — Private Label Sheet Mask Manufacturer | Amy Skin OEM	ชีทมาสก์ — ผู้ผลิตชีทมาสก์ Private Label | Amy Skin OEM
+Sunscreen SPF50 — Private Label Sunscreen Manufacturer | Amy Skin OEM	ครีมกันแดด SPF50 — ผู้ผลิตครีมกันแดด Private Label | Amy Skin OEM
 Vitamin C Serum — Private Label Serum Manufacturer | Amy Skin OEM	วิตามิน ซี เรียม — เครื่อง มือ ส่วน ตัว
 What is a private label 24K gold eye mask? An under-eye collagen patch built around a 24K gold hydrogel, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	อะไรคือหน้ากากทอง 24K โครงสร้างใต้สายตา สร้างรอบ 24K ทองไฮโดรเจล พร้อมสําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง.
 What is a private label 24K gold hyaluronic acid serum? A 10-ampoule set built around 24K gold and sodium hyaluronate, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	เซรั่มกรดไฮยาลูโรนิกทอง 24K สำหรับแบรนด์ของคุณคืออะไร? ชุดแอมพูล 10 หลอดที่ประกอบด้วยทอง 24K และโซเดียมไฮยาลูโรเนต พร้อมสำหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่มต้นจากสูตรสำเร็จนี้หรือปรับแต่งตามต้องการ — ทดลองตัวอย่างก่อน แล้วจึงสั่งผลิตจำนวนมาก
@@ -1037,7 +1034,7 @@ What is a private label sea buckthorn anti-wrinkle cream? A face cream built aro
 What is a private label self tanning oil? A streak-free bronze tanning oil in 50 g, ready for your brand at MOQ 500–1,000 units. Sample first, then bulk.	อะไร คือ น้ํามัน ทา ครีม สําหรับ ตัว เอง? น้ํามันเคลือบทองแดงไร้รอยขีดข่วนใน 50 กรัม พร้อมสําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย ตัวอย่างแรก, แล้วก็ตัวใหญ่
 What is a private label Shampoo? A hair-care shampoo, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	อะไรคือตราประจําของชัมปูร์ แชมพูบํารุงผม พร้อมสําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง.
 What is a private label Sheet Mask? A single-use hydrating mask in a sealed pouch, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	หน้ากาก แผ่น พับ แบบ ส่วน ตัว คือ อะไร? หน้ากากฉีดน้ําแบบใช้ครั้งเดียว ในถุงที่ปิดผนึก พร้อมสําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง.
-What is a private label Sunscreen SPF50? A sun-protection product for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk. SPF claims and testing are confirmed per market.	Sunscreen SPF50 คืออะไร ผลิตภัณฑ์ป้องกันแสงอาทิตย์ สําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง. SPF เรียกร้องและการทดสอบได้รับการยืนยันต่อตลาด
+What is a private label Sunscreen SPF50? A sun-protection product for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk. SPF claims and testing are confirmed per market.	ครีมกันแดด SPF50 คืออะไร ผลิตภัณฑ์ป้องกันแสงอาทิตย์ สําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง. SPF เรียกร้องและการทดสอบได้รับการยืนยันต่อตลาด
 What is a private label Vitamin C serum? A brightening serum in 10% or 15% Vitamin C, ready for your brand at MOQ 500–1,000 units. Start from this ready formula or customise it — sample first, then bulk.	วิตามินซีเซรั่มคืออะไร เซรั่มที่สว่างไสวใน 10% หรือ 15% วิตามินซี พร้อมสําหรับแบรนด์ของคุณที่ MOQ 500–1,000 หน่วย เริ่ม จาก สูตร ที่ เตรียม ไว้ แล้ว หรือ ทํา ให้ เป็น ตัว อย่าง ก่อน แล้ว ก็ ทํา เป็น ตัว อย่าง.
 Can this formula be customised?	สูตร นี้ จะ ทํา ได้ ไหม?
 How brands use it	วิธีใช้แบรนด์
@@ -1074,7 +1071,7 @@ What is a private label retinol under eye serum?	ชื่อประจํา�
 What is a private label self tanning oil?	อะไร คือ น้ํามัน ทา ครีม สําหรับ ตัว เอง?
 What is a private label Shampoo?	อะไรคือตราประจําของชัมปูร์
 What is a private label Sheet Mask?	หน้ากาก แผ่น พับ แบบ ส่วน ตัว คือ อะไร?
-What is a private label Sunscreen SPF50?	Sunscreen SPF50 คืออะไร
+What is a private label Sunscreen SPF50?	ครีมกันแดด SPF50 คืออะไร
 What is a private label Vitamin C serum?	วิตามินซีเซรั่มคืออะไร
 What to send with your enquiry	จะส่งอะไรมาด้วย
 What we handle for your brand	สิ่งที่เราจัดการสําหรับแบรนด์ของคุณ
@@ -1394,54 +1391,54 @@ CICA Oil-to-Mask Treatment — Amy Skin private label	CICA น้ํามัน
 Cocoa Butter Sugar Scrub Strawberry — Amy Skin private label	โคลา บัตเตอร์ ชูการ์ ส ตรา ว์ เบอร์ รี — Amy Skin 
 Color Changing Lip Oil — Amy Skin private label	สี ที่ เปลี่ยน สี น้ํามัน ริม ฝีปาก — ป้าย ส่วน ตัว ของ Amy Skin 
 High Moisturizing Cream — Amy Skin private label	การ ทํา ให้ ครีม มี ความ ไว สูง — ตรา ประจํา ตัว ของ Amy Skin 
-Houttuynia Cleansing Spray — Amy Skin private label	โฮ ท์ ตู เนีย
+Houttuynia Cleansing Spray — Amy Skin private label	สเปรย์ทำความสะอาด Houttuynia — ป้าย Private Label ของ Amy Skin
 Hyaluronic Acid Serum — Amy Skin private label	ไฮ อาลู มิ นิก เซรั่ม — ชื่อ ส่วน ตัว ของ Amy Skin 
 Hydrating Toner — Amy Skin private label	ไฮน์ นิง โท เนอ ร์ — ชื่อ เล่น ส่วน ตัว ของ Amy Skin
 Moisturising Cream — Amy Skin private label	การ กระตุ้น ครีม — ฉลาก ส่วน ตัว ของ Amy Skin 
-Niacinamide Serum — Amy Skin private label	นิ อะ คา มิ เด สิ อุม — ชื่อ เฉพาะ ของ Amy Skin
+Niacinamide Serum — Amy Skin private label	เซรั่มไนอะซินาไมด์ — ป้าย Private Label ของ Amy Skin
 Peptide Serum — Amy Skin private label	เปป ไทด์ เซรั่ม — ชื่อ เล่น ส่วน ตัว ของ Amy Skin 
 Purifying Facial Cleanser — Amy Skin private label	การ ชําระ หน้า ให้ สะอาด — เครื่อง ล้าง ผิว หน้า Amy Skin 
 Retinol Eye Cream Stick — Amy Skin private label	เรทิ นอล ตา ครีม — แท่ง หนัง Amy Skin 
-Retinol Under Eye Serum — Amy Skin private label	Retinol Internight Serum — Amy skins tags
+Retinol Under Eye Serum — Amy Skin private label	เซรั่มเรตินอลใต้ตา — ป้าย Private Label ของ Amy Skin
 Self Tanning Oil — Amy Skin private label	น้ํามัน ทา ตัว เอง — ตรา ประจํา ตัว ของ Amy Skin 
-Shampoo — Amy Skin private label	อ่าง น้ํา — ป้าย ประจํา ตัว ของ Amy Skin 
+Shampoo — Amy Skin private label	แชมพู — ป้าย Private Label ของ Amy Skin
 Sheet Mask — Amy Skin private label	หน้ากาก แผ่น — ตรา ประจํา ตัว ของ Amy Skin 
-Sunscreen SPF50 — Amy Skin private label	Suncreen SPF50 — Amy skin tags
+Sunscreen SPF50 — Amy Skin private label	ครีมกันแดด SPF50 — ป้าย Private Label ของ Amy Skin
 Vitamin C Serum — Amy Skin private label	วิตามิน ซี เรียม — ชื่อ ส่วน ตัว ของ Amy Skin 
 / Body & Hair Care / Body Lotion	การ เลี้ยง ลูก ด้วย นม มารดา
 / Body & Hair Care / Cocoa Butter Sugar Scrub Strawberry	/ ดูแลผิวกายและเส้นผม / สครับน้ำตาลโกโก้บัตเตอร์ สตรอว์เบอร์รี
-/ Body & Hair Care / Self Tanning Oil	/ หนวด และ ขน ของ ตัว เอง / น้ํามัน ทา นิน
-/ Body & Hair Care / Shampoo	การ เลี้ยง ลูก ด้วย นม มารดา
+/ Body & Hair Care / Self Tanning Oil	/ การดูแลผิวกายและเส้นผม / ออยล์แทนผิวด้วยตนเอง
+/ Body & Hair Care / Shampoo	/ การดูแลผิวกายและเส้นผม / แชมพู
 / Cleanser & Toner / Amino Acid Cleanser	เครื่องทําความสะอาดและโทเนอร์ / เครื่องทําความสะอาดอมิโน
 / Cleanser & Toner / Banana Facial Cleanser	เครื่องล้างใบหน้า
 / Cleanser & Toner / Green Tea Facial Cleanser	เครื่องทําความสะอาดและหมึกดํา
-/ Cleanser & Toner / Hydrating Toner	/ ทําความสะอาดและ toner / hypering toner
-/ Cleanser & Toner / Purifying Facial Cleanser	เครื่องล้างใบหน้า
-/ Cleanser / Houttuynia Cleansing Spray	/ น้ํายาทําความสะอาด / Houttuynia
+/ Cleanser & Toner / Hydrating Toner	/ คลีนเซอร์และโทนเนอร์ / โทนเนอร์ให้ความชุ่มชื้น
+/ Cleanser & Toner / Purifying Facial Cleanser	/ คลีนเซอร์และโทนเนอร์ / คลีนเซอร์ทำความสะอาดผิวหน้า
+/ Cleanser / Houttuynia Cleansing Spray	/ คลีนเซอร์ / สเปรย์ทำความสะอาดฮาวตูเนีย
 / Creams / Anti-Aging Cream	ครีม / ครีมปฏิรูป
 / Creams / Bosein Sea Buckthorn Polypeptide Anti-Wrinkle Cream	ครีม / ครีม โบซิน ซี บัคต์ฮ อร์น โพลีเปปไทด์ แอนตี้วินเทิลครีม
 / Creams / High Moisturizing Cream	ครีม / ครีม ชั้น สูง
-/ Creams / Moisturising Cream	ครีม / ครีม สมุนไพร
-/ Creams / Retinol Eye Cream Stick	ครีม / ครีม ตา แดง
+/ Creams / Moisturising Cream	/ ครีม / ครีมมอยส์เจอไรเซอร์
+/ Creams / Retinol Eye Cream Stick	/ ครีม / สติกครีมตาด้วยเรตินอล
 / Lip Care / Color Changing Lip Oil	สี
-/ Lip Care / Pink Collagen Crystal Lip Masks	หอย มัส เซิล
+/ Lip Care / Pink Collagen Crystal Lip Masks	/ การดูแลริมฝีปาก / มาสก์ปากคริสตัลคอลลาเจนสีชมพู
 / Serums / 24K Gold Hyaluronic Acid Serum	/ เซรั่ม / 24K โกลด์ ไฮอัลโลไรด์ เซรั่ม
 / Serums / Barrier Repairing Essence	/ เซรั่ม / เครื่อง เรือน ซ่อมแซม
 / Serums / Blushwood Berry Seed Extract Facial Essence	/ เซรั่ม / บลูชวูด เบอร์รี่ เมล็ดพันธุ์ คลายใบหน้า
 / Serums / Carrot Face Serum	เซรั่ม / คาร์รอท เฟส เซรั่ม
-/ Serums / Hyaluronic Acid Serum	/ เซรั่ม / ไฮอัลโลโมนิก เซรั่ม
-/ Serums / Niacinamide Serum	/ เซรั่ม / นิคามิไนด์ เซรั่ม
-/ Serums / Peptide Serum	เซรั่ม / เป๊ปตีด เซรั่ม
-/ Serums / Retinol Under Eye Serum	/ เซรั่ม / เรติโนล ภายใต้ตา เซรั่ม
-/ Serums / Vitamin C Serum	เซรั่ม / วิตามินซีรัม
+/ Serums / Hyaluronic Acid Serum	/ เซรั่ม / เซรั่มไฮยาลูโรนิก
+/ Serums / Niacinamide Serum	/ เซรั่ม / เซรั่มไนอะซินาไมด์
+/ Serums / Peptide Serum	/ เซรั่ม / เซรั่มเปปไทด์
+/ Serums / Retinol Under Eye Serum	/ เซรั่ม / เซรั่มเรตินอลใต้ตา
+/ Serums / Vitamin C Serum	/ เซรั่ม / เซรั่มวิตามินซี
 / Sheet Mask / 24K Gold Eye Mask Under Eye Collagen Patch	ภาพ หน้า ปก / 24K
 / Sheet Mask / Chamomile Facial Mask	หน้าปัดของแผ่น / หน้ากากสีชาโมไมล์
 / Sheet Mask / CICA Oil-to-Mask Treatment	/ หน้ากากแผ่น / CICA สีต่อมา
-/ Sheet Mask / Hydrogel V Face Patch	/ หน้ากากแผ่น / ไฮโดรเกล VFFace Passet
-/ Sheet Mask / Leucocyte Firming Face Mask	หน้ากาก แผ่น พับ / หน้ากาก ทํา หน้า ที่ หนัก แน่น
-/ Sheet Mask / Sheet Mask	แปรงทาสี
+/ Sheet Mask / Hydrogel V Face Patch	/ ชีทมาสก์ / แผ่นมาสก์หน้าไฮโดรเจลรูปตัว V
+/ Sheet Mask / Leucocyte Firming Face Mask	/ ชีทมาสก์ / มาสก์หน้ากระชับลิวโคไซต์
+/ Sheet Mask / Sheet Mask	/ ชีทมาสก์ / ชีทมาสก์
 / Skin Care Sets / Centella Amino Acid Skin Care Set	/ ชุดดูแลผิว / ชุดดูแลผิวอะมิโนแอซิดเซนเทลลา
-/ Sun Care / Sunscreen SPF50	/ กันแดด / กันแดด SPF50
+/ Sun Care / Sunscreen SPF50	/ การดูแลผิวจากแสงแดด / ครีมกันแดด SPF50
 10-ampoule card – confirm per order	ไพ่ 10 ใบ - ยืนยันต่อลําดับ
 100% bio-collagen, hydration & plumping	เลเยอร์% 100
 10:1 blushwood berry seed extract, intensive hydration	สารสกัดจากเมล็ดเบอร์รี่บลัชวูด 10:1 ให้ความชุ่มชื้นอย่างล้ำลึก
