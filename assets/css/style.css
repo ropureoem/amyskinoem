@@ -358,6 +358,11 @@ header.site .language-switch{margin-left:8px;flex-shrink:0}
 .mobile-menu .language-switch a{padding:5px 12px;border-bottom:0}
 footer.site .language-switch{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding:0}
 footer.site .language-switch a{color:#FAF6EF}
+/* 2026-11-15: footer switcher moved into the #contact column (was at the
+   very bottom of the page). Left-aligned row matching the other Contact
+   links, 44px tap height. */
+footer.site #contact .language-switch{justify-content:flex-start;gap:4px 12px}
+footer.site #contact .language-switch a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:#F5EFE6}
 .bottom-nav{display:none}
 @media(max-width:699px){
 body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
