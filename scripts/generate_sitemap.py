@@ -32,7 +32,7 @@ ROOT_PAGES = ["index.html", "about.html", "blog.html", "brand-kit.html",
 EXCLUDE_FILES = {"brand.html",
                  "formulas/hyaluronic-acid-pdrn-capsule-spray.html",
                  "404.html"}
-LANGS = ["en", "zh", "es", "pt", "it", "ru", "ar"]
+LANGS = ["en", "zh", "es", "pt", "it", "ru", "ar", "fr"]
 
 
 def pages_for_lang(lang):
