@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate sitemap.xml for amyskinoem.com from the actual files on disk.
 
-- Scans en / zh / es / pt / it page sets (root pages + blog/ + formulas/).
+- Scans en / zh / es / pt / it / ru page sets (root pages + blog/ + formulas/).
 - Excludes: brand.html (not in the sitemap by decision, all languages),
   the meta-refresh redirect placeholder
   formulas/hyaluronic-acid-pdrn-capsule-spray.html, and 404.html.
@@ -32,7 +32,7 @@ ROOT_PAGES = ["index.html", "about.html", "blog.html", "brand-kit.html",
 EXCLUDE_FILES = {"brand.html",
                  "formulas/hyaluronic-acid-pdrn-capsule-spray.html",
                  "404.html"}
-LANGS = ["en", "zh", "es", "pt", "it"]
+LANGS = ["en", "zh", "es", "pt", "it", "ru"]
 
 
 def pages_for_lang(lang):
@@ -117,11 +117,12 @@ def main():
     lines.append("</urlset>")
     new = [u for u in urls if u[0] not in existing]
     dropped = [u for u in existing if u not in {x[0] for x in urls}]
-    print(f"total={len(urls)} en={sum(1 for u in urls if '/zh/' not in u[0] and '/es/' not in u[0] and '/pt/' not in u[0] and '/it/' not in u[0])} "
+    print(f"total={len(urls)} en={sum(1 for u in urls if '/zh/' not in u[0] and '/es/' not in u[0] and '/pt/' not in u[0] and '/it/' not in u[0] and '/ru/' not in u[0])} "
           f"zh={sum(1 for u in urls if '/zh/' in u[0])} "
           f"es={sum(1 for u in urls if '/es/' in u[0])} "
           f"pt={sum(1 for u in urls if '/pt/' in u[0])} "
           f"it={sum(1 for u in urls if '/it/' in u[0])} "
+          f"ru={sum(1 for u in urls if '/ru/' in u[0])} "
           f"new={len(new)} dropped={len(dropped)}")
     for loc, _, _ in new:
         print("  +", loc)
