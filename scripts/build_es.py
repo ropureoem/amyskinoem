@@ -10,8 +10,8 @@ Usage: python3 scripts/build_es.py [--update-en-zh]
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
 - Links to formulas/ point at the English formulas/ until phase 2 (no es
   formula pages exist yet); they are flipped back when phase 2 lands.
-- Rebuilds hreflang (x-default -> en, en, zh, es) and the .language-switch
-  navs (EN/ZH/ES, aria-label "Selección de idioma").
+- Rebuilds hreflang (x-default -> en, en, zh, es, pt) and the .language-switch
+  navs (EN/ZH/ES/PT, aria-label "Selección de idioma").
 - With --update-en-zh, also adds x-default + es hreflang and an ES switcher
   link to the matching en/ and zh/ pages (only for pages that have an es
   version). Never touches any other page, and never touches English content.
@@ -119,6 +119,12 @@ def zh_url(rel):
     return SITE + "/zh/" + rel
 
 
+def pt_url(rel):
+    if rel == "index.html":
+        return SITE + "/pt/"
+    return SITE + "/pt/" + rel
+
+
 def relpath(from_dir, target):
     """Relative URL from directory `from_dir` (site-relative, '' = site
     root) to site-relative `target`."""
@@ -133,6 +139,7 @@ def switcher_html(rel, current="es"):
         ("en", rel, "EN"),
         ("zh", "zh/" + rel, "ZH"),
         ("es", "es/" + rel, "ES"),
+        ("pt", "pt/" + rel, "PT"),
     ):
         href = relpath(es_dir, target)
         cur = ' aria-current="true"' if code == current else ""
@@ -232,7 +239,8 @@ class EsBuilder(HTMLParser):
                 for code, url in (("x-default", en_url(self.rel)),
                                   ("en", en_url(self.rel)),
                                   ("zh", zh_url(self.rel)),
-                                  ("es", es_url(self.rel))):
+                                  ("es", es_url(self.rel)),
+                                  ("pt", pt_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -280,7 +288,8 @@ class EsBuilder(HTMLParser):
                 for code, url in (("x-default", en_url(self.rel)),
                                   ("en", en_url(self.rel)),
                                   ("zh", zh_url(self.rel)),
-                                  ("es", es_url(self.rel))):
+                                  ("es", es_url(self.rel)),
+                                  ("pt", pt_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -296,7 +305,8 @@ class EsBuilder(HTMLParser):
             for code, url in (("x-default", en_url(self.rel)),
                               ("en", en_url(self.rel)),
                               ("zh", zh_url(self.rel)),
-                              ("es", es_url(self.rel))):
+                              ("es", es_url(self.rel)),
+                              ("pt", pt_url(self.rel))):
                 self.out.append(
                     f'<link href="{url}" hreflang="{code}" '
                     f'rel="alternate"/>')
