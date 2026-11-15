@@ -597,3 +597,38 @@ html[lang="en"] .home .hero p:has(> .btn) .btn{font-size:13px;padding:12px 14px;
 .home .b-faq .card p{padding:0 14px 12px}
 }/* Hero: mobile keeps the person visible on the right */
 @media(min-width:700px) and (max-width:900px){.home .hero::before{background-position:right center}}
+
+/* ---- RTL overrides (Arabic ar/ pages, dir="rtl") — added 2026-11-15 ----
+   The base stylesheet is LTR-first and mostly flex/grid, which flips
+   automatically under dir=rtl. Only physical left/right rules need
+   mirroring here. LTR pages are untouched (every rule is [dir="rtl"]-scoped). */
+[dir="rtl"] nav.main{margin-left:0;margin-right:auto}
+[dir="rtl"] header.site .language-switch{margin-left:0;margin-right:8px}
+[dir="rtl"] .nav-toggle{margin-left:0;margin-right:auto;padding:10px 10px 10px 2px}
+[dir="rtl"] .table th,[dir="rtl"] .table td{text-align:right}
+[dir="rtl"] .checks li{padding:8px 30px 8px 0}
+[dir="rtl"] .checks li:before{left:auto;right:4px}
+[dir="rtl"] .video-slot .play{padding-left:0;padding-right:6px}
+[dir="rtl"] header.site .logo span.logo-oem,[dir="rtl"] footer.site .logo span.logo-oem{border-left:0;border-right:1px solid rgba(201,168,106,.25);padding-left:0;padding-right:12px;margin-left:0;margin-right:12px}
+[dir="rtl"] .badge{margin:4px 0 4px 6px}
+[dir="rtl"] .home .hero::before{background-position:left center}
+[dir="rtl"] .home .hero-model{right:auto;left:-60px}
+[dir="rtl"] .home .hero>.wrap:first-child{margin-left:auto;margin-right:0}
+[dir="rtl"] .home .hero-proof li::before{margin-right:0;margin-left:8px}
+[dir="rtl"] .topbar-set{padding-right:0;padding-left:10px}
+[dir="rtl"] .home .marquee-set,[dir="rtl"] .home .supplier-row .marquee-set{padding-right:0;padding-left:48px}
+@media(max-width:900px){[dir="rtl"] .home .marquee-set{padding-left:32px}}
+@media(max-width:699px){[dir="rtl"] .home .marquee-set{padding-left:28px}}
+@media(max-width:560px){[dir="rtl"] .home .supplier-row .marquee-set{padding-left:36px}}
+[dir="rtl"] .home .marquee-row{animation-direction:reverse}
+[dir="rtl"] .home .marquee-row.rev{animation-direction:normal}
+@media(min-width:700px) and (max-width:900px){[dir="rtl"] .home .hero::before{background-position:left center}}
+@media(max-width:900px){[dir="rtl"] .nav-toggle{padding:12px 12px 12px 4px}}
+/* RTL only: 7-language header switcher overflows below ~1366px (ar nav labels
+   are wider than EN); tighten spacing so the header fits at 1280px instead of
+   pushing the page 83px off-screen left. LTR untouched. */
+@media(max-width:1480px){
+[dir="rtl"] header.site .language-switch a{padding:5px 7px}
+[dir="rtl"] header.site .language-switch{gap:4px}
+[dir="rtl"] header.site .nav{gap:12px}
+}

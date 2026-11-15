@@ -32,7 +32,7 @@ ROOT_PAGES = ["index.html", "about.html", "blog.html", "brand-kit.html",
 EXCLUDE_FILES = {"brand.html",
                  "formulas/hyaluronic-acid-pdrn-capsule-spray.html",
                  "404.html"}
-LANGS = ["en", "zh", "es", "pt", "it", "ru"]
+LANGS = ["en", "zh", "es", "pt", "it", "ru", "ar"]
 
 
 def pages_for_lang(lang):
@@ -123,6 +123,7 @@ def main():
           f"pt={sum(1 for u in urls if '/pt/' in u[0])} "
           f"it={sum(1 for u in urls if '/it/' in u[0])} "
           f"ru={sum(1 for u in urls if '/ru/' in u[0])} "
+          f"ar={sum(1 for u in urls if '/ar/' in u[0])} "
           f"new={len(new)} dropped={len(dropped)}")
     for loc, _, _ in new:
         print("  +", loc)
