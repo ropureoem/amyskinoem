@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Regenerate sitemap.xml for amyskinoem.com from the actual files on disk.
 
-- Scans en / zh / es / pt / it / ru / ar / fr / id / ja / de page sets (root pages + blog/ + formulas/).
+- Scans en / zh / es / pt / it / ru / ar / fr / id / ja / de / th page sets (root pages + blog/ + formulas/).
 - Excludes: brand.html (not in the sitemap by decision, all languages),
   the meta-refresh redirect placeholder
   formulas/hyaluronic-acid-pdrn-capsule-spray.html, and 404.html.
@@ -32,7 +32,7 @@ ROOT_PAGES = ["index.html", "about.html", "blog.html", "brand-kit.html",
 EXCLUDE_FILES = {"brand.html",
                  "formulas/hyaluronic-acid-pdrn-capsule-spray.html",
                  "404.html"}
-LANGS = ["en", "zh", "es", "pt", "it", "ru", "ar", "fr", "id", "ja", "de"]
+LANGS = ["en", "zh", "es", "pt", "it", "ru", "ar", "fr", "id", "ja", "de", "th"]
 
 
 def pages_for_lang(lang):
