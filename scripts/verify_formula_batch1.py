@@ -3,7 +3,7 @@
 
 Checks (exit non-zero on any failure):
   1. Each of es/pt/it/ru/ar/fr/id/ja/de/th/formulas/ has the 17 batch-1
-     pages, no more, no fewer (inside formulas/).
+     pages (plus the 17 batch-2 pages) inside formulas/.
   2. Every new page: correct <html lang> (ar also dir="rtl", others no
      dir), self canonical, hreflang group {x-default, en, zh, es, pt, it,
      ru, ar, fr, id, ja, de, th} with correct absolute URLs.
@@ -18,7 +18,7 @@ Checks (exit non-zero on any failure):
   7. No factory names anywhere in the new pages (望莎 / 三木生 / Moksha).
   8. en/zh formula pages carry the full 12-language hreflang group and
      switchers.
-  9. sitemap.xml lists all 170 new URLs (total 418), no brand.html, no
+  9. sitemap.xml lists all 170 new URLs (total 588), no brand.html, no
      redirect placeholder hyaluronic-acid-pdrn-capsule-spray.
 Usage: python3 scripts/verify_formula_batch1.py
 """
@@ -48,6 +48,26 @@ FORMULA_BATCH1 = [
     "color-changing-lip-oil.html",
     "green-tea-facial-cleanser.html",
     "high-moisturizing-cream.html",
+]
+
+FORMULA_BATCH2 = [
+    "houttuynia-cleansing-spray.html",
+    "hyaluronic-acid-serum.html",
+    "hydrating-toner.html",
+    "hydrogel-v-face-patch.html",
+    "leucocyte-firming-face-mask.html",
+    "moisturising-cream.html",
+    "peptide-serum.html",
+    "pink-collagen-crystal-lip-mask.html",
+    "niacinamide-serum.html",
+    "purifying-facial-cleanser.html",
+    "retinol-eye-cream-stick.html",
+    "retinol-under-eye-serum.html",
+    "self-tanning-oil.html",
+    "shampoo.html",
+    "sheet-mask.html",
+    "sunscreen-spf50.html",
+    "vitamin-c-serum.html",
 ]
 FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
 FACTORY_NAMES = ["望莎", "三木生", "Moksha", "望莎生物", "三木"]
@@ -249,7 +269,7 @@ def main():
     # 1. file set per language
     for lang in LANGS:
         found = set(os.listdir(os.path.join(ROOT, lang, "formulas")))
-        if found != set(FORMULA_BATCH1):
+        if found != set(FORMULA_BATCH1 + FORMULA_BATCH2):
             fail(f"{lang}/formulas/ mismatch: "
                  f"missing={sorted(set(FORMULA_BATCH1) - found)} "
                  f"extra={sorted(found - set(FORMULA_BATCH1))}")
@@ -291,8 +311,8 @@ def main():
         fail("sitemap contains brand.html")
     if any("hyaluronic-acid-pdrn-capsule-spray" in u for u in locs):
         fail("sitemap contains the redirect placeholder")
-    if len(locs) != 418:
-        fail(f"sitemap has {len(locs)} URLs, expected 418")
+    if len(locs) != 588:
+        fail(f"sitemap has {len(locs)} URLs, expected 588")
 
     print(f"checked {len(LANGS) * len(FORMULA_PAGES)} new pages + "
           f"en/zh counterparts + sitemap")

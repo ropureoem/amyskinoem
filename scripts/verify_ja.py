@@ -2,11 +2,11 @@
 """Verify the Japanese (ja/) phase-1 rollout for amyskinoem.com.
 
 Checks (exit non-zero on any failure):
-  1. ja/ contains exactly the 16 phase-1 pages, no more, no fewer.
+  1. ja/ contains the 16 phase-1 pages + 34 formula pages, no more, no fewer.
   2. Every ja page: <html lang="ja"> with no dir attribute, exactly one <h1>, self canonical,
-     hreflang group {x-default, en, zh, es, pt, it, ru, ar, fr, id, ja} with correct absolute URLs.
-  3. hreflang groups are symmetric across the en / zh / es / pt / it / ru / ar / fr / id versions.
-  4. Every .language-switch nav (header, footer, mobile) has EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA
+     hreflang group {x-default, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th} with correct absolute URLs.
+  3. hreflang groups are symmetric across all 12 language versions.
+  4. Every .language-switch nav (header, footer, mobile) has all 12 languages'
      links, JA marked aria-current, and every link resolves to a real file.
   5. Every local href/src/srcset in ja pages resolves to a real file.
   6. No English residue: no text node (outside pre/code/script/style)
@@ -38,6 +38,8 @@ JA_PAGES = [
     "blog/vitamin-c-vs-niacinamide-which-serum-fits-your-brand.html",
     "blog/what-moq-1000-really-means.html",
 ]
+FORMULA_FILES = ['24k-gold-eye-mask.html', '24k-gold-hyaluronic-acid-serum.html', 'amino-acid-cleanser.html', 'anti-aging-cream.html', 'banana-facial-cleanser.html', 'barrier-repairing-essence.html', 'blushwood-berry-seed-extract-essence.html', 'body-lotion.html', 'bosein-sea-buckthorn-cream.html', 'carrot-face-serum.html', 'centella-amino-acid-skin-care-set.html', 'chamomile-facial-mask.html', 'cica-oil-to-mask-treatment.html', 'cocoa-butter-sugar-scrub-strawberry.html', 'color-changing-lip-oil.html', 'green-tea-facial-cleanser.html', 'high-moisturizing-cream.html', 'houttuynia-cleansing-spray.html', 'hyaluronic-acid-serum.html', 'hydrating-toner.html', 'hydrogel-v-face-patch.html', 'leucocyte-firming-face-mask.html', 'moisturising-cream.html', 'niacinamide-serum.html', 'peptide-serum.html', 'pink-collagen-crystal-lip-mask.html', 'purifying-facial-cleanser.html', 'retinol-eye-cream-stick.html', 'retinol-under-eye-serum.html', 'self-tanning-oil.html', 'shampoo.html', 'sheet-mask.html', 'sunscreen-spf50.html', 'vitamin-c-serum.html']
+FORMULA_SET = {"formulas/" + f for f in FORMULA_FILES}
 FACTORY_NAMES = ["望莎", "三木生", "Moksha", "望莎生物", "三木"]
 EN_WORDS = re.compile(
     r"\b(the|and|your|our|with|from|this|that|these|those|which|what|when|"
@@ -102,13 +104,17 @@ def ja_url(rel):
     return SITE + "/ja/" + rel if rel != "index.html" else SITE + "/ja/"
 
 
+def de_url(rel):
+    return SITE + "/de/" + rel if rel != "index.html" else SITE + "/de/"
+
+def th_url(rel):
+    return SITE + "/th/" + rel if rel != "index.html" else SITE + "/th/"
+
 def expected_hreflang(rel):
     return {"x-default": en_url(rel), "en": en_url(rel),
-            "zh": zh_url(rel), "es": es_url(rel),
-            "pt": pt_url(rel), "it": it_url(rel),
-            "ru": ru_url(rel), "ar": ar_url(rel),
-            "fr": fr_url(rel), "id": id_url(rel),
-            "ja": ja_url(rel)}
+            "zh": zh_url(rel), "es": es_url(rel), "pt": pt_url(rel), "it": it_url(rel),
+            "ru": ru_url(rel), "ar": ar_url(rel), "fr": fr_url(rel), "id": id_url(rel),
+            "ja": ja_url(rel), "de": de_url(rel), "th": th_url(rel)}
 
 
 class PageScan(HTMLParser):
@@ -202,7 +208,7 @@ def check_page(rel):
         if sw["aria"] != "言語を選択":
             fail(f"{tag}: switcher {i} aria-label {sw['aria']!r}")
         langs = {c: (h, cur) for c, h, cur in sw["links"]}
-        if set(langs) != {"en", "zh", "es", "pt", "it", "ru", "ar", "fr", "id", "ja"}:
+        if set(langs) != {"en", "zh", "es", "pt", "it", "ru", "ar", "fr", "id", "ja", "de", "th"}:
             fail(f"{tag}: switcher {i} languages {sorted(langs)}")
             continue
         if not langs["ja"][1]:
@@ -237,7 +243,7 @@ def main():
             found.add(os.path.relpath(os.path.join(base, fn),
                                       os.path.join(ROOT, "ja")))
     found = {f.replace(os.sep, "/") for f in found}
-    if found != set(JA_PAGES):
+    if found != set(JA_PAGES) | FORMULA_SET:
         fail(f"ja/ file set mismatch: missing={sorted(set(JA_PAGES) - found)} "
              f"extra={sorted(found - set(JA_PAGES))}")
 
@@ -247,10 +253,7 @@ def main():
 
     # 3. hreflang symmetry + 8. en/zh/es/pt/it/ru/ar/fr/id updated
     for rel in JA_PAGES:
-        for lang, prefix in (("en", ""), ("zh", "zh/"), ("es", "es/"),
-                             ("pt", "pt/"), ("it", "it/"), ("ru", "ru/"),
-                             ("ar", "ar/"), ("fr", "fr/"),
-                             ("id", "id/")):
+        for lang, prefix in ((("en", ""), ("zh", "zh/"), ("es", "es/"), ("pt", "pt/"), ("it", "it/"), ("ru", "ru/"), ("ar", "ar/"), ("fr", "fr/"), ("id", "id/"), ("ja", "ja/"), ("de", "de/"), ("th", "th/"))):
             path = prefix + rel
             p, _raw = scan(path, rel)
             if p.hreflang != expected_hreflang(rel):
@@ -277,11 +280,11 @@ def main():
              "decision, like en/zh/es/pt/it/ru/ar/fr/id)")
     if any("hyaluronic-acid-pdrn-capsule-spray" in u for u in locs):
         fail("sitemap contains the redirect placeholder")
-    if len(locs) != 218:
-        WARNINGS.append(f"sitemap has {len(locs)} URLs, expected 218 "
-                        f"(203 + 15 ja)")
+    if len(locs) != 588:
+        WARNINGS.append(f"sitemap has {len(locs)} URLs, expected 588 "
+                        f"(12 languages x 49)")
 
-    print(f"checked {len(JA_PAGES)} ja pages + en/zh/es/pt/it/ru/ar/fr/id counterparts + sitemap")
+    print(f"checked {len(JA_PAGES)} ja pages + all-language counterparts + sitemap")
     for w in WARNINGS:
         print("WARNING:", w)
     if FAILURES:

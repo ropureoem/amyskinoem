@@ -15,7 +15,7 @@ Usage: python3 scripts/build_es.py [--update] [--formulas-only]
 - With --update-en-zh, also adds x-default + es hreflang and an ES switcher
   link to the matching en/ and zh/ pages (only for pages that have an es
   version). Never touches any other page, and never touches English content.
-- Writes a coverage report to /tmp/eswork/build-report.json.
+- Writes a coverage report to scripts/i18n/work/build-report-es.json.
 """
 import html
 import json
@@ -562,7 +562,7 @@ def main():
     if update:
         for rel in pages:
             update_en_zh(rel)
-    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-es-formula2.json") if formulas_only else "/tmp/eswork/build-report.json")
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-es-formula2.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-es.json"))
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="

@@ -17,7 +17,7 @@ Usage: python3 scripts/build_pt.py [--update] [--formulas-only]
   matching en/, zh/ and es/ pages (only for pages that have a pt version),
   so all four language versions of a page carry the same hreflang group.
   Never touches any other page, and never touches English content.
-- Writes a coverage report to /tmp/ptwork/build-report.json.
+- Writes a coverage report to scripts/i18n/work/build-report-pt.json.
 """
 import html
 import json
@@ -562,7 +562,7 @@ def main():
     if update:
         for rel in pages:
             update_en_zh(rel)
-    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-pt-formula2.json") if formulas_only else "/tmp/ptwork/build-report.json")
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-pt-formula2.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-pt.json"))
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="

@@ -1,0 +1,6 @@
+# build reports & caches (local only; work/ reports are regenerable)
+scripts/i18n/work/*
+!scripts/i18n/work/.gitkeep
+scripts/__pycache__/
+**/__pycache__/
+.wrangler/
