@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 """Build Spanish (es/) pages for amyskinoem.com from the English originals.
 
-Usage: python3 scripts/build_es.py [--update-en-zh]
+Usage: python3 scripts/build_es.py [--update] [--formulas-only]
 
 - Copies the 16 phase-1 English pages into es/ (same filenames).
 - Rewrites relative paths by depth (../ for root pages, ../../ for blog/).
 - Translates text nodes and translatable attributes with scripts/i18n/es.tsv
   (exact match first, then longest-first phrase replacement inside a string).
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
-- Links to formulas/ point at the English formulas/ until phase 2 (no es
-  formula pages exist yet); they are flipped back when phase 2 lands.
-- Rebuilds hreflang (x-default -> en, en, zh, es, pt) and the .language-switch
-  navs (EN/ZH/ES/PT, aria-label "Selección de idioma").
+- Links to formulas/ point at the es formulas/ for batch-1 pages
+  (FORMULA_BATCH1); other formula pages still link to English.
+- Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th) and the .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA/DE/TH, aria-label "Selección de idioma").
 - With --update-en-zh, also adds x-default + es hreflang and an ES switcher
   link to the matching en/ and zh/ pages (only for pages that have an es
   version). Never touches any other page, and never touches English content.
@@ -39,6 +38,28 @@ ES_PAGES = [
     "blog/vitamin-c-vs-niacinamide-which-serum-fits-your-brand.html",
     "blog/what-moq-1000-really-means.html",
 ]
+FORMULA_BATCH1 = [
+    "24k-gold-eye-mask.html",
+    "24k-gold-hyaluronic-acid-serum.html",
+    "amino-acid-cleanser.html",
+    "anti-aging-cream.html",
+    "banana-facial-cleanser.html",
+    "barrier-repairing-essence.html",
+    "blushwood-berry-seed-extract-essence.html",
+    "body-lotion.html",
+    "bosein-sea-buckthorn-cream.html",
+    "carrot-face-serum.html",
+    "centella-amino-acid-skin-care-set.html",
+    "chamomile-facial-mask.html",
+    "cica-oil-to-mask-treatment.html",
+    "cocoa-butter-sugar-scrub-strawberry.html",
+    "color-changing-lip-oil.html",
+    "green-tea-facial-cleanser.html",
+    "high-moisturizing-cream.html",
+]
+
+FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
+
 
 VOID = {"meta", "link", "img", "br", "hr", "input", "area", "base", "col",
         "embed", "source", "track", "wbr"}
@@ -124,6 +145,46 @@ def pt_url(rel):
         return SITE + "/pt/"
     return SITE + "/pt/" + rel
 
+def it_url(rel):
+    if rel == "index.html":
+        return SITE + "/it/"
+    return SITE + "/it/" + rel
+
+def ru_url(rel):
+    if rel == "index.html":
+        return SITE + "/ru/"
+    return SITE + "/ru/" + rel
+
+def ar_url(rel):
+    if rel == "index.html":
+        return SITE + "/ar/"
+    return SITE + "/ar/" + rel
+
+def fr_url(rel):
+    if rel == "index.html":
+        return SITE + "/fr/"
+    return SITE + "/fr/" + rel
+
+def id_url(rel):
+    if rel == "index.html":
+        return SITE + "/id/"
+    return SITE + "/id/" + rel
+
+def ja_url(rel):
+    if rel == "index.html":
+        return SITE + "/ja/"
+    return SITE + "/ja/" + rel
+
+def de_url(rel):
+    if rel == "index.html":
+        return SITE + "/de/"
+    return SITE + "/de/" + rel
+
+def th_url(rel):
+    if rel == "index.html":
+        return SITE + "/th/"
+    return SITE + "/th/" + rel
+
 
 def relpath(from_dir, target):
     """Relative URL from directory `from_dir` (site-relative, '' = site
@@ -140,6 +201,14 @@ def switcher_html(rel, current="es"):
         ("zh", "zh/" + rel, "ZH"),
         ("es", "es/" + rel, "ES"),
         ("pt", "pt/" + rel, "PT"),
+        ("it", "it/" + rel, "IT"),
+        ("ru", "ru/" + rel, "RU"),
+        ("ar", "ar/" + rel, "AR"),
+        ("fr", "fr/" + rel, "FR"),
+        ("id", "id/" + rel, "ID"),
+        ("ja", "ja/" + rel, "JA"),
+        ("de", "de/" + rel, "DE"),
+        ("th", "th/" + rel, "TH")
     ):
         href = relpath(es_dir, target)
         cur = ' aria-current="true"' if code == current else ""
@@ -173,7 +242,8 @@ class EsBuilder(HTMLParser):
         if target in ES_PAGES:
             return relpath(self.es_dir, "es/" + target)
         if target.startswith("formulas/"):
-            # No es formula pages yet (phase 2): link to the English page.
+            if target in FORMULA_PAGES:
+                return relpath(self.es_dir, "es/" + target)
             return relpath(self.es_dir, target)
         return relpath(self.es_dir, target)
 
@@ -240,7 +310,15 @@ class EsBuilder(HTMLParser):
                                   ("en", en_url(self.rel)),
                                   ("zh", zh_url(self.rel)),
                                   ("es", es_url(self.rel)),
-                                  ("pt", pt_url(self.rel))):
+                                  ("pt", pt_url(self.rel)),
+                                  ("it", it_url(self.rel)),
+                                  ("ru", ru_url(self.rel)),
+                                  ("ar", ar_url(self.rel)),
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -289,7 +367,15 @@ class EsBuilder(HTMLParser):
                                   ("en", en_url(self.rel)),
                                   ("zh", zh_url(self.rel)),
                                   ("es", es_url(self.rel)),
-                                  ("pt", pt_url(self.rel))):
+                                  ("pt", pt_url(self.rel)),
+                                  ("it", it_url(self.rel)),
+                                  ("ru", ru_url(self.rel)),
+                                  ("ar", ar_url(self.rel)),
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -306,7 +392,15 @@ class EsBuilder(HTMLParser):
                               ("en", en_url(self.rel)),
                               ("zh", zh_url(self.rel)),
                               ("es", es_url(self.rel)),
-                              ("pt", pt_url(self.rel))):
+                              ("pt", pt_url(self.rel)),
+                              ("it", it_url(self.rel)),
+                              ("ru", ru_url(self.rel)),
+                              ("ar", ar_url(self.rel)),
+                              ("fr", fr_url(self.rel)),
+                              ("id", id_url(self.rel)),
+                              ("ja", ja_url(self.rel)),
+                              ("de", de_url(self.rel)),
+                              ("th", th_url(self.rel))):
                 self.out.append(
                     f'<link href="{url}" hreflang="{code}" '
                     f'rel="alternate"/>')
@@ -438,13 +532,16 @@ def update_en_zh(rel):
 
 def main():
     update = "--update-en-zh" in sys.argv
-    for rel in ES_PAGES:
+    formulas_only = "--formulas-only" in sys.argv
+    pages = FORMULA_PAGES if formulas_only else ES_PAGES
+    for rel in pages:
         dest = build_es_page(rel)
         print("built", dest)
     if update:
-        for rel in ES_PAGES:
+        for rel in pages:
             update_en_zh(rel)
-    with open("/tmp/eswork/build-report.json", "w", encoding="utf-8") as f:
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-es-formula1.json") if formulas_only else "/tmp/eswork/build-report.json")
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="
           f"{len(REPORT['phrase'])} untranslated="

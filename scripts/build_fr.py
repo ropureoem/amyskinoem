@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Build French (fr/) pages for amyskinoem.com from the English originals.
 
-Usage: python3 scripts/build_fr.py [--update]
+Usage: python3 scripts/build_fr.py [--update] [--formulas-only]
 
 - Copies the 16 phase-1 English pages into fr/ (same filenames).
 - Rewrites relative paths by depth (../ for root pages, ../../ for blog/).
 - Translates text nodes and translatable attributes with scripts/i18n/fr.tsv
   (exact match first, then longest-first phrase replacement inside a string).
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
-- Links to formulas/ point at the English formulas/ until phase 2 (no fr
-  formula pages exist yet); they are flipped back when phase 2 lands.
-- Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr) and the
-  .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR, aria-label "Sélection de la langue").
+- Links to formulas/ point at the fr formulas/ for batch-1 pages
+  (FORMULA_BATCH1); other formula pages still link to English.
+- Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th) and the
+  .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA/DE/TH, aria-label "Sélection de la langue").
   <html> gets lang="fr" (LTR: no dir attribute).
 - With --update, also adds fr hreflang and an FR switcher link to the
   matching en/, zh/, es/, pt/, it/, ru/ and ar/ pages (only for pages that have
@@ -42,6 +42,28 @@ FR_PAGES = [
     "blog/vitamin-c-vs-niacinamide-which-serum-fits-your-brand.html",
     "blog/what-moq-1000-really-means.html",
 ]
+FORMULA_BATCH1 = [
+    "24k-gold-eye-mask.html",
+    "24k-gold-hyaluronic-acid-serum.html",
+    "amino-acid-cleanser.html",
+    "anti-aging-cream.html",
+    "banana-facial-cleanser.html",
+    "barrier-repairing-essence.html",
+    "blushwood-berry-seed-extract-essence.html",
+    "body-lotion.html",
+    "bosein-sea-buckthorn-cream.html",
+    "carrot-face-serum.html",
+    "centella-amino-acid-skin-care-set.html",
+    "chamomile-facial-mask.html",
+    "cica-oil-to-mask-treatment.html",
+    "cocoa-butter-sugar-scrub-strawberry.html",
+    "color-changing-lip-oil.html",
+    "green-tea-facial-cleanser.html",
+    "high-moisturizing-cream.html",
+]
+
+FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
+
 
 VOID = {"meta", "link", "img", "br", "hr", "input", "area", "base", "col",
         "embed", "source", "track", "wbr"}
@@ -151,6 +173,26 @@ def es_url(rel):
         return SITE + "/es/"
     return SITE + "/es/" + rel
 
+def id_url(rel):
+    if rel == "index.html":
+        return SITE + "/id/"
+    return SITE + "/id/" + rel
+
+def ja_url(rel):
+    if rel == "index.html":
+        return SITE + "/ja/"
+    return SITE + "/ja/" + rel
+
+def de_url(rel):
+    if rel == "index.html":
+        return SITE + "/de/"
+    return SITE + "/de/" + rel
+
+def th_url(rel):
+    if rel == "index.html":
+        return SITE + "/th/"
+    return SITE + "/th/" + rel
+
 
 def relpath(from_dir, target):
     """Relative URL from directory `from_dir` (site-relative, '' = site
@@ -171,6 +213,10 @@ def switcher_html(rel, current="fr"):
         ("ru", "ru/" + rel, "RU"),
         ("ar", "ar/" + rel, "AR"),
         ("fr", "fr/" + rel, "FR"),
+        ("id", "id/" + rel, "ID"),
+        ("ja", "ja/" + rel, "JA"),
+        ("de", "de/" + rel, "DE"),
+        ("th", "th/" + rel, "TH")
     ):
         href = relpath(fr_dir, target)
         cur = ' aria-current="true"' if code == current else ""
@@ -204,7 +250,8 @@ class FrBuilder(HTMLParser):
         if target in FR_PAGES:
             return relpath(self.fr_dir, "fr/" + target)
         if target.startswith("formulas/"):
-            # No fr formula pages yet (phase 2): link to the English page.
+            if target in FORMULA_PAGES:
+                return relpath(self.fr_dir, "fr/" + target)
             return relpath(self.fr_dir, target)
         return relpath(self.fr_dir, target)
 
@@ -275,7 +322,11 @@ class FrBuilder(HTMLParser):
                                   ("it", it_url(self.rel)),
                                   ("ru", ru_url(self.rel)),
                                   ("ar", ar_url(self.rel)),
-                                  ("fr", fr_url(self.rel))):
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -328,7 +379,11 @@ class FrBuilder(HTMLParser):
                                   ("it", it_url(self.rel)),
                                   ("ru", ru_url(self.rel)),
                                   ("ar", ar_url(self.rel)),
-                                  ("fr", fr_url(self.rel))):
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -349,7 +404,11 @@ class FrBuilder(HTMLParser):
                               ("it", it_url(self.rel)),
                               ("ru", ru_url(self.rel)),
                               ("ar", ar_url(self.rel)),
-                              ("fr", fr_url(self.rel))):
+                              ("fr", fr_url(self.rel)),
+                              ("id", id_url(self.rel)),
+                              ("ja", ja_url(self.rel)),
+                              ("de", de_url(self.rel)),
+                              ("th", th_url(self.rel))):
                 self.out.append(
                     f'<link href="{url}" hreflang="{code}" '
                     f'rel="alternate"/>')
@@ -480,13 +539,16 @@ def update_prev_langs(rel):
 
 def main():
     update = "--update" in sys.argv or "--update-en-zh" in sys.argv
-    for rel in FR_PAGES:
+    formulas_only = "--formulas-only" in sys.argv
+    pages = FORMULA_PAGES if formulas_only else FR_PAGES
+    for rel in pages:
         dest = build_fr_page(rel)
         print("built", dest)
     if update:
-        for rel in FR_PAGES:
+        for rel in pages:
             update_prev_langs(rel)
-    with open(os.path.join(ROOT, "scripts", "i18n", "work", "build-report-fr.json"), "w", encoding="utf-8") as f:
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-fr-formula1.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-fr.json"))
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="
           f"{len(REPORT['phrase'])} untranslated="

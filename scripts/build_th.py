@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Build Thai (th/) pages for amyskinoem.com from the English originals.
 
-Usage: python3 scripts/build_th.py [--update]
+Usage: python3 scripts/build_th.py [--update] [--formulas-only]
 
 - Copies the 16 phase-1 English pages into th/ (same filenames).
 - Rewrites relative paths by depth (../ for root pages, ../../ for blog/).
 - Translates text nodes and translatable attributes with scripts/i18n/th.tsv
   (exact match first, then longest-first phrase replacement inside a string).
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
-- Links to formulas/ point at the English formulas/ until phase 2 (no th
-  formula pages exist yet); they are flipped back when phase 2 lands.
+- Links to formulas/ point at the th formulas/ for batch-1 pages
+  (FORMULA_BATCH1); other formula pages still link to English.
  - Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th) and the
   .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA/DE/TH, aria-label "เลือกภาษา").
   <html> gets lang="th" (LTR: no dir attribute).
@@ -42,6 +42,28 @@ TH_PAGES = [
     "blog/vitamin-c-vs-niacinamide-which-serum-fits-your-brand.html",
     "blog/what-moq-1000-really-means.html",
 ]
+FORMULA_BATCH1 = [
+    "24k-gold-eye-mask.html",
+    "24k-gold-hyaluronic-acid-serum.html",
+    "amino-acid-cleanser.html",
+    "anti-aging-cream.html",
+    "banana-facial-cleanser.html",
+    "barrier-repairing-essence.html",
+    "blushwood-berry-seed-extract-essence.html",
+    "body-lotion.html",
+    "bosein-sea-buckthorn-cream.html",
+    "carrot-face-serum.html",
+    "centella-amino-acid-skin-care-set.html",
+    "chamomile-facial-mask.html",
+    "cica-oil-to-mask-treatment.html",
+    "cocoa-butter-sugar-scrub-strawberry.html",
+    "color-changing-lip-oil.html",
+    "green-tea-facial-cleanser.html",
+    "high-moisturizing-cream.html",
+]
+
+FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
+
 
 VOID = {"meta", "link", "img", "br", "hr", "input", "area", "base", "col",
         "embed", "source", "track", "wbr"}
@@ -199,7 +221,7 @@ def switcher_html(rel, current="th"):
         ("id", "id/" + rel, "ID"),
         ("ja", "ja/" + rel, "JA"),
         ("de", "de/" + rel, "DE"),
-        ("th", "th/" + rel, "TH"),
+        ("th", "th/" + rel, "TH")
     ):
         href = relpath(th_dir, target)
         cur = ' aria-current="true"' if code == current else ""
@@ -233,7 +255,8 @@ class ThBuilder(HTMLParser):
         if target in TH_PAGES:
             return relpath(self.th_dir, "th/" + target)
         if target.startswith("formulas/"):
-            # No th formula pages yet (phase 2): link to the English page.
+            if target in FORMULA_PAGES:
+                return relpath(self.th_dir, "th/" + target)
             return relpath(self.th_dir, target)
         return relpath(self.th_dir, target)
 
@@ -521,13 +544,16 @@ def update_prev_langs(rel):
 
 def main():
     update = "--update" in sys.argv or "--update-en-zh" in sys.argv
-    for rel in TH_PAGES:
+    formulas_only = "--formulas-only" in sys.argv
+    pages = FORMULA_PAGES if formulas_only else TH_PAGES
+    for rel in pages:
         dest = build_th_page(rel)
         print("built", dest)
     if update:
-        for rel in TH_PAGES:
+        for rel in pages:
             update_prev_langs(rel)
-    with open(os.path.join(ROOT, "scripts", "i18n", "work", "build-report-th.json"), "w", encoding="utf-8") as f:
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-th-formula1.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-th.json"))
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="
           f"{len(REPORT['phrase'])} untranslated="

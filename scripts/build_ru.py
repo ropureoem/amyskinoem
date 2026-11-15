@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Build Russian (ru/) pages for amyskinoem.com from the English originals.
 
-Usage: python3 scripts/build_ru.py [--update]
+Usage: python3 scripts/build_ru.py [--update] [--formulas-only]
 
 - Copies the 16 phase-1 English pages into ru/ (same filenames).
 - Rewrites relative paths by depth (../ for root pages, ../../ for blog/).
 - Translates text nodes and translatable attributes with scripts/i18n/ru.tsv
   (exact match first, then longest-first phrase replacement inside a string).
 - <pre>/<code>/<style> and non-JSON-LD <script> are copied verbatim.
-- Links to formulas/ point at the English formulas/ until phase 2 (no ru
-  formula pages exist yet); they are flipped back when phase 2 lands.
-- Rebuilds hreflang (x-default -> en, en, zh, es, pt, it) and the
-  .language-switch navs (EN/ZH/ES/PT/IT, aria-label "Выбор языка").
+- Links to formulas/ point at the ru formulas/ for batch-1 pages
+  (FORMULA_BATCH1); other formula pages still link to English.
+- Rebuilds hreflang (x-default -> en, en, zh, es, pt, it, ru, ar, fr, id, ja, de, th) and the
+  .language-switch navs (EN/ZH/ES/PT/IT/RU/AR/FR/ID/JA/DE/TH, aria-label "Выбор языка").
 - With --update, also adds ru hreflang and a RU switcher link to the
   matching en/, zh/, es/, pt/ and it/ pages (only for pages that have a ru
   version), so all six language versions of a page carry the same hreflang
@@ -41,6 +41,28 @@ RU_PAGES = [
     "blog/vitamin-c-vs-niacinamide-which-serum-fits-your-brand.html",
     "blog/what-moq-1000-really-means.html",
 ]
+FORMULA_BATCH1 = [
+    "24k-gold-eye-mask.html",
+    "24k-gold-hyaluronic-acid-serum.html",
+    "amino-acid-cleanser.html",
+    "anti-aging-cream.html",
+    "banana-facial-cleanser.html",
+    "barrier-repairing-essence.html",
+    "blushwood-berry-seed-extract-essence.html",
+    "body-lotion.html",
+    "bosein-sea-buckthorn-cream.html",
+    "carrot-face-serum.html",
+    "centella-amino-acid-skin-care-set.html",
+    "chamomile-facial-mask.html",
+    "cica-oil-to-mask-treatment.html",
+    "cocoa-butter-sugar-scrub-strawberry.html",
+    "color-changing-lip-oil.html",
+    "green-tea-facial-cleanser.html",
+    "high-moisturizing-cream.html",
+]
+
+FORMULA_PAGES = ["formulas/" + s for s in FORMULA_BATCH1]
+
 
 VOID = {"meta", "link", "img", "br", "hr", "input", "area", "base", "col",
         "embed", "source", "track", "wbr"}
@@ -138,6 +160,36 @@ def es_url(rel):
         return SITE + "/es/"
     return SITE + "/es/" + rel
 
+def ar_url(rel):
+    if rel == "index.html":
+        return SITE + "/ar/"
+    return SITE + "/ar/" + rel
+
+def fr_url(rel):
+    if rel == "index.html":
+        return SITE + "/fr/"
+    return SITE + "/fr/" + rel
+
+def id_url(rel):
+    if rel == "index.html":
+        return SITE + "/id/"
+    return SITE + "/id/" + rel
+
+def ja_url(rel):
+    if rel == "index.html":
+        return SITE + "/ja/"
+    return SITE + "/ja/" + rel
+
+def de_url(rel):
+    if rel == "index.html":
+        return SITE + "/de/"
+    return SITE + "/de/" + rel
+
+def th_url(rel):
+    if rel == "index.html":
+        return SITE + "/th/"
+    return SITE + "/th/" + rel
+
 
 def relpath(from_dir, target):
     """Relative URL from directory `from_dir` (site-relative, '' = site
@@ -156,6 +208,12 @@ def switcher_html(rel, current="ru"):
         ("pt", "pt/" + rel, "PT"),
         ("it", "it/" + rel, "IT"),
         ("ru", "ru/" + rel, "RU"),
+        ("ar", "ar/" + rel, "AR"),
+        ("fr", "fr/" + rel, "FR"),
+        ("id", "id/" + rel, "ID"),
+        ("ja", "ja/" + rel, "JA"),
+        ("de", "de/" + rel, "DE"),
+        ("th", "th/" + rel, "TH")
     ):
         href = relpath(ru_dir, target)
         cur = ' aria-current="true"' if code == current else ""
@@ -189,7 +247,8 @@ class RuBuilder(HTMLParser):
         if target in RU_PAGES:
             return relpath(self.ru_dir, "ru/" + target)
         if target.startswith("formulas/"):
-            # No ru formula pages yet (phase 2): link to the English page.
+            if target in FORMULA_PAGES:
+                return relpath(self.ru_dir, "ru/" + target)
             return relpath(self.ru_dir, target)
         return relpath(self.ru_dir, target)
 
@@ -258,7 +317,13 @@ class RuBuilder(HTMLParser):
                                   ("es", es_url(self.rel)),
                                   ("pt", pt_url(self.rel)),
                                   ("it", it_url(self.rel)),
-                                  ("ru", ru_url(self.rel))):
+                                  ("ru", ru_url(self.rel)),
+                                  ("ar", ar_url(self.rel)),
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -309,7 +374,13 @@ class RuBuilder(HTMLParser):
                                   ("es", es_url(self.rel)),
                                   ("pt", pt_url(self.rel)),
                                   ("it", it_url(self.rel)),
-                                  ("ru", ru_url(self.rel))):
+                                  ("ru", ru_url(self.rel)),
+                                  ("ar", ar_url(self.rel)),
+                                  ("fr", fr_url(self.rel)),
+                                  ("id", id_url(self.rel)),
+                                  ("ja", ja_url(self.rel)),
+                                  ("de", de_url(self.rel)),
+                                  ("th", th_url(self.rel))):
                     self.out.append(
                         f'<link href="{url}" hreflang="{code}" '
                         f'rel="alternate"/>')
@@ -328,7 +399,13 @@ class RuBuilder(HTMLParser):
                               ("es", es_url(self.rel)),
                               ("pt", pt_url(self.rel)),
                               ("it", it_url(self.rel)),
-                              ("ru", ru_url(self.rel))):
+                              ("ru", ru_url(self.rel)),
+                              ("ar", ar_url(self.rel)),
+                              ("fr", fr_url(self.rel)),
+                              ("id", id_url(self.rel)),
+                              ("ja", ja_url(self.rel)),
+                              ("de", de_url(self.rel)),
+                              ("th", th_url(self.rel))):
                 self.out.append(
                     f'<link href="{url}" hreflang="{code}" '
                     f'rel="alternate"/>')
@@ -459,13 +536,16 @@ def update_prev_langs(rel):
 
 def main():
     update = "--update" in sys.argv or "--update-en-zh" in sys.argv
-    for rel in RU_PAGES:
+    formulas_only = "--formulas-only" in sys.argv
+    pages = FORMULA_PAGES if formulas_only else RU_PAGES
+    for rel in pages:
         dest = build_ru_page(rel)
         print("built", dest)
     if update:
-        for rel in RU_PAGES:
+        for rel in pages:
             update_prev_langs(rel)
-    with open(os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ru.json"), "w", encoding="utf-8") as f:
+    report_path = (os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ru-formula1.json") if formulas_only else os.path.join(ROOT, "scripts", "i18n", "work", "build-report-ru.json"))
+    with open(report_path, "w", encoding="utf-8") as f:
         json.dump(REPORT, f, ensure_ascii=False, indent=1)
     print(f"exact={REPORT['exact']} phrase_changes="
           f"{len(REPORT['phrase'])} untranslated="

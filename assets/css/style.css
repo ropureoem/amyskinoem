@@ -325,8 +325,8 @@ footer.site .social a{color:#F5EFE6;font-weight:700;font-size:14px}
 .home .ing3{grid-template-columns:1fr}
 .home .sci-wrap{grid-template-columns:1fr}
 .home .why-grid{grid-template-columns:1fr}
-.home .mobile-menu{position:fixed;top:88px;left:0;right:0;bottom:0;z-index:30;overflow-y:auto}
-.home .mobile-menu.is-open{max-height:calc(100vh - 88px);padding:10px 16px 24px}
+.mobile-menu{position:fixed;top:88px;left:0;right:0;bottom:0;z-index:30;overflow-y:auto}
+.mobile-menu.is-open{max-height:calc(100vh - 88px);padding:10px 16px 24px}
 .home .stats .wrap{gap:16px}
 }
 @media(max-width:560px){
